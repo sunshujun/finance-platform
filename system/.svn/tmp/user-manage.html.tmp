@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/system.css" />
+		<link href="../css/common.css" rel="stylesheet">
+		<title></title>
+	</head>
+	<body>
+		 <div class="tab-content  " id="right-MyTabContent" >
+		 	        <!--页面首页右侧切换用户管理-->
+					<div class="tab-pane fade active in  clearfix row" id="user-manage">
+						<div class="user-left  col-sm-3 col-md-3">
+							<p>组织机构<span class="glyphicon glyphicon-refresh"></span></p>
+						</div>
+						<div class=" col-sm-9 col-md-9">
+							<ul class="nav nav-tabs">
+								<li class="active in"><a href="#user-list" data-toggle="tab">用户列表</a></li>
+								<li ><a href="#user-add" data-toggle="tab">用户添加</a></li>
+							</ul>
+							<div class="tab-content">
+								<!--用户管理列表tab页-->
+								<div class="tab-pane fade active in " id="user-list">
+									<div class=" header">
+										<form class="form-inline" >
+					                    		<div class="form-group ">
+					                    		    <label>类型:</label>	
+					                    		    <div class="input-group display-type">					                    		    	
+					                    				<input type="text" class="form-control">
+					                    				<span class="input-group-addon searchAdd" ><i class=" glyphicon glyphicon-search"></i></span>
+					                    			
+					                    			</div>
+					                    	    </div>
+						                    	<div class="form-group">
+						                    		<label>描述:</label>				                    		
+						                    			<input type="text" class="form-control">			                    		
+						                    	</div>
+						                    	<button class="btn btn-primary">查询</button>						                    	
+					                    	</form>
+									</div>
+									<div class="table-responsive">
+										<table class="table table-striped table-bordered">
+											<thead>
+												<tr>
+													<th><a href="#">所属机构<span class="glyphicon glyphicon-arrow-up"></span></a></th>
+													<th><a href="#">登录名<span class="glyphicon glyphicon-arrow-up"></span></a></th>
+													<th><a href="#">姓名<span class="glyphicon glyphicon-arrow-up"></span></a></th>
+													<th>岗位</th>
+													<th>是否允许登录</th>
+													<th>操作</th>
+											</thead>
+											<tbody>
+												<tr>
+													<td>顶级机构</td>
+													<td><a href="#user-add" data-toggle="tab">text3</a></td>
+													<td>姓名</td>
+													<td>管理岗位</td>
+													<td>是</td>
+													<td><a href="#user-add" data-toggle="tab">修改</a><a href="#delete" data-toggle="modal">删除</a><a href="#">重置密码</a></td>
+											</tbody>
+										</table>
+									</div>
+									<ul class="pagination">
+										<li><a href="#">&laquo;上一页</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li class="disabled"><a href="#">&raquo;下一页</a></li>
+										<li>
+											<div class="page-num">
+										       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+									        </div>
+										</li>
+									</ul>
+								</div>
+								<!--用户管理添加tab页-->
+								<div class="tab-pane fade " id="user-add">
+									<form class="form-horizontal form-padding form-font">
+										<div class="form-group">
+											<label class="control-label col-sm-2 col-md-2">归属机构:</label>
+											<div class="col-sm-3 col-md-3">
+												<div class="input-group">
+													<input type="text" class="form-control" >
+													<span class="input-group-addon searchAdd-p"><span class="glyphicon glyphicon-search"></span></span>											
+												</div>
+												
+											</div>
+											<span class="point-color">*</span>
+											
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2 col-md-2">登录名:</label>
+											<div class="col-sm-3 col-md-3">
+												<input type="text" class="form-control">												
+											</div>
+											<span class="point-color">*</span>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2 col-md-2">岗位:</label>
+											<div class="col-sm-3 col-md-3">
+												<select class="form-control inputOption">
+													<option>岗位一</option>
+													<option>岗位二</option>
+													<option>岗位三</option>
+												</select>												
+											</div>
+											<span class="point-color">*</span>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2 col-md-2">姓名:</label>
+											<div class="col-sm-3 col-md-3">
+												<input type="text" class="form-control">
+											</div>											
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2 col-md-2">密码:</label>
+											<div class="col-sm-3 col-md-3">
+												<input type="text" class="form-control">
+											</div>											
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2 col-md-2">确认密码:</label>
+											<div class="col-sm-3 col-md-3">
+												<input type="text" class="form-control">
+											</div>											
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2 col-md-2">是否允许登录:</label>
+											<div class="col-sm-3 col-md-3">
+												<label for="no-login" class="user-label"><input type="radio" name="login" id="no-login" >&nbsp;否</label>
+												<label for="yes-login" class="user-label"><input type="radio" name="login" id="yes-login"  >&nbsp;是</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2 col-md-2">用户角色:</label>
+											<div class="col-sm-10 col-md-10 user-role">
+												<label for="user-roler1"  ><input type="checkbox" id="user-role1" >&nbsp;系统管理</label>
+												<label for="user-roler2"><input type="checkbox" id="user-role2">&nbsp;普通用户</label>
+												<label for="user-roler3"><input type="checkbox" id="user-role3">&nbsp;112</label>
+											</div>
+										</div>
+										<div class="form-group">
+											    <div class="col-sm-offset-2 col-sm-5">
+											        <button type="submit" class="btn btn-primary">保存</button>
+											        <button type="submit" class="btn btn-default">返回</button>
+											    </div>
+<<<<<<< .mine
+										   </div> 
+									</form> 
+=======
+										    </div>
+										
+									</form>
+									
+>>>>>>> .r128
+								</div>
+							</div>
+					
+						</div>
+					</div>
+				   <!--列表删除弹出框-->
+				   <div class="modal fade" id="delete" data-backdrop="false">
+									<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h4>系统提示</h4>
+										</div>
+										<div class="modal-body">
+											确认要删除？
+										</div>
+									    <div class="modal-footer">
+									    	<button class="btn btn-default" data-dismiss="modal">取消</button>
+									    	<button class="btn btn-default" data-dismiss="modal">确认</button>
+									    </div>
+									</div>
+								    </div>
+					</div>					
+ 	 </div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/system.js" ></script>
+</html>

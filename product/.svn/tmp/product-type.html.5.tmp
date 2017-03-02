@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/product.css" />
+		<link rel="stylesheet" href="../css/common.css">
+		<title>产品品种信息</title>
+	</head>
+	<body>
+		<div class="tab-content " id="right-MyTabContent" >
+			<!--页面首页右侧产品品种信息-->
+			<div class="tab-pane fade active in  " id="product-type">
+					     <ul class="nav nav-tabs">
+							<li class="active in li-block"><a href="#product-type-list" data-toggle="tab">产品品种列表</a></li>
+							<li class="li-block"><a href="#product-type-add" data-toggle="tab">产品品种添加</a></li>
+							<li ><a href="#product-type-channel" data-toggle="tab">产品品种机构渠道列表</a></li>
+							<li ><a href="#product-type-control" data-toggle="tab">产品品种机构渠道控制配置</a></li>
+							<li ><a href="#deal-time-list" data-toggle="tab">产品品种交易时段控制列表</a></li>
+							<li ><a href="#deal-time-add" data-toggle="tab">产品品种交易时段控制添加</a></li>
+							<li ><a href="#organize-limit-control" data-toggle="tab">大额存单产品品种机构额度控制</a></li>
+							<li ><a href="#account-message-list" data-toggle="tab">账号信息列表</a></li>
+							<li ><a href="#account-message-add" data-toggle="tab">账户信息添加</a></li>
+						</ul>
+						<div class="tab-content">
+							<!--产品品种信息列表-->
+						     <div class="tab-pane fade active in " id="product-type-list">
+								<div class="header">
+									<form class="form-inline">
+										<div class="form-group">
+										     <label>产品品种标识：</label><input type="text" class="form-control" /> 
+										</div>
+										<div class="form-group">
+										     <label>产品品种名称：</label><input type="text" class="form-control" />
+										</div> 
+										<div class="form-group">
+											<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+											<button class="btn btn-info "><span class="glyphicon glyphicon-refresh"></span>&nbsp;重置</button>
+											<button class="btn btn-danger "><span class="glyphicon glyphicon-trash"></span>&nbsp;删除</button>
+											<button class="btn btn-success "><span class="glyphicon glyphicon-repeat"></span>&nbsp;刷新缓存</button>
+									    </div>
+									</form>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th><label for="pro-type" class="checkbox-inline"><input type="checkbox" id="pro-type"/>全选</label></th>
+												<th>品种标识</th>
+												<th>品种名称</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input type="checkbox"/></td>
+												<td>0001</td>
+												<td>大额存单</td>
+												<td>
+													<a href="#product-type-add" data-toggle="tab" >修改</a>
+													<a href="#delete" data-toggle="modal" >删除</a>
+													<a href="#type-limit" data-toggle="modal" >品种限额</a>
+													<a href="#transfer-para" data-toggle="modal" >转让参数</a>
+													<a href="#product-type-channel" data-toggle="tab" >机构渠道</a>
+													<a href="#deal-time-list" data-toggle="tab" >交易时段控制</a>
+													<a href="#organize-limit-control" data-toggle="tab" >机构额度控制</a>
+													<a href="#work-control" data-toggle="tab" >工作日控制</a>
+													<a href="#trade-mode-modal" data-toggle="modal" >交易模式</a>
+													<a href="#price-deviate-modal" data-toggle="modal" >价格偏离度</a>
+													<a href="#property-out" data-toggle="modal" >资产服务接出信息</a>
+													<a href="#account-message-list" data-toggle="tab" >账号信息</a>
+													<a href="#" data-toggle="" >刷新缓冲</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<ul class="pagination">
+										<li><a href="#">&laquo;上一页</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li class="disabled"><a href="#">&raquo;下一页</a></li>
+										<li>
+											<div class="page-num">
+										       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+									        </div>
+										</li>
+									</ul>
+								</div>
+								
+							</div>
+							<!--产品品种信息添加-->
+							 <div class="tab-pane fade " id="product-type-add">
+								<form role="form" class="form-horizontal add-list">
+									<div class="form-group">
+									 	<label class="control-label col-sm-2">产品品种标识<span class="point-color">*</span>：</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div> 
+									 </div>
+									 <div class="form-group">
+									 	<label class="control-label col-sm-2">品种名称<span class="point-color">*</span>：</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div> 
+									 </div>
+									 <div class="form-group">
+									 	<label class="control-label col-sm-2">备注：</label>
+									 	<div class="col-sm-5 padding-div">
+											<textarea class="form-control" rows="3"></textarea>
+										</div> 
+									 </div> 
+									<div class="form-group span-foot ">
+											 	<div class="col-sm-2 col-sm-offset-1">维护机构：00000</div>
+											 	<div class="col-sm-2">维护柜员：00000</div>
+											 	<div class="col-sm-4">维护时间：2016-08-15 08:46:28</div>
+									 </div>
+									 <div class="add-footer row">
+									 	<div class="col-sm-4 col-sm-offset-4">
+										 	<button type="submit" class="btn btn-info">保&nbsp;存</button>
+										 	<button type="button" class="btn btn-default">返&nbsp;回</button>
+										</div>
+									 </div>
+								</form>
+							 </div>
+						   <!--产品品种机构渠道列表-->
+						     <div class="tab-pane fade" id="product-type-channel">
+						     	 <div class="header">
+									<form class="form-inline">
+										<label>渠道标识：</label> <select class="form-control">
+										 	         <option>柜面渠道</option>
+										 	         <option>网上银行</option>
+										 	         <option>手机银行</option>
+										          </select> <span class="padding"></span>
+										<div class="form-group">
+											<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+											<button class="btn btn-info "><span class="glyphicon glyphicon-refresh"></span>&nbsp;重置</button>
+											<button class="btn btn-danger "><span class="glyphicon glyphicon-trash"></span>&nbsp;删除</button>
+											<button class="btn btn-success "><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;添加配置</button>
+									    </div>
+									</form>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th><label for="pro-check" class="checkbox"><input type="checkbox" id="pro-check"/>全选</label></th>
+												<th>产品品种名称</th>
+												<th>销售机构</th>
+												<th>渠道标识</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input type="checkbox"/></td>
+												<td>大额存单</td>
+												<td>钱大门户</td>
+												<td>网上银行</td>
+												<td>
+													<a href="#product-type-control" data-toggle="tab" >修改</a>
+													<a href="#delete" data-toggle="modal" >删除</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<ul class="pagination">
+										<li><a href="#">&laquo;上一页</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li class="disabled"><a href="#">&raquo;下一页</a></li>
+										<li>
+											<div class="page-num">
+										       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+									        </div>
+										</li>
+									</ul>
+								
+								</div>
+						     </div>
+						   <!--产品品种机构渠道控制配置-->
+						     <div class="tab-pane fade" id="product-type-control">
+						     	<form role="form" class="form-horizontal add-list">
+						     		    <div class="form-group">
+										 	<label class="control-label col-sm-2">分组名称：</label>
+										 	<div class="col-sm-3 padding-div">
+												<input type="text" class="form-control"> 
+											</div> 
+										</div>
+										<div class="form-group">
+										 	<label class="control-label col-sm-2">渠道标识<span class="point-color">*</span>：</label>
+										 	<div class="col-sm-3 padding-div">
+												<input type="text" class="form-control"> 
+											</div> 
+										</div> 
+										<div class="form-group">
+										 	<label class="control-label col-sm-2">销售机构代码：</label>
+										 	<div class="col-sm-3 padding-div">
+												<input type="text" class="form-control"> 
+											</div> 
+										</div> 
+										<div class="form-group">
+										 	<label class="control-label col-sm-2">机构折扣率：</label>
+										 	<div class="col-sm-3 padding-div">
+												<input type="text" class="form-control"> 
+											</div> 
+										</div> 
+										<div class="form-group">
+										 	<label class="control-label col-sm-2">机构管理费率：</label>
+										 	<div class="col-sm-3 padding-div">
+												<input type="text" class="form-control"> 
+											</div> 
+										</div>
+										<div class="form-group">
+										 	<label class="control-label col-sm-2">是否允许标志：</label>
+										 	<div class="col-sm-3 padding-div">
+												<select class="form-control" >
+											 		<option>———请选择———</option>
+											 		<option>允许</option>
+											 		<option>不允许</option>
+											 	</select>
+											</div> 
+										</div> 
+										<div class="form-group">
+										 	<label class="control-label col-sm-2">备注：</label>
+										 	<div class="col-sm-5 padding-div">
+												<textarea class="form-control" rows="3"></textarea>
+											</div> 
+										</div>  
+										<div class="form-group span-foot ">
+												 	<div class="col-sm-2 col-sm-offset-1">维护机构：00000</div>
+												 	<div class="col-sm-2">维护柜员：00000</div>
+												 	<div class="col-sm-4">维护时间：2016-08-15 08:46:28</div>
+										 </div>
+										<div class="add-footer row">
+										 	<div class="col-sm-4 col-sm-offset-4">
+											 	<button type="submit" class="btn btn-info">保&nbsp;存</button>
+											 	<button type="button" class="btn btn-default">返&nbsp;回</button>
+											</div>
+										</div>
+								</form>
+						     </div>
+						   <!--产品品种交易时段控制列表-->
+						    <div class="tab-pane fade" id="deal-time-list">
+						     	<div class="header">
+									<form class="form-inline">
+										<label>服务名称：</label> <select class="form-control">
+											 		<option>———请选择———</option>
+											 		<option>参数同步</option>
+											 		<option>交易查询</option>
+											 		<option>交易查询</option>
+											 		<option>参数同步</option>
+											 		<option>交易查询</option>
+											 		<option>交易查询</option>
+											      </select>
+										<div class="form-group">
+											<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+											<button class="btn btn-info "><span class="glyphicon glyphicon-refresh"></span>&nbsp;重置</button>
+											<button class="btn btn-danger "><span class="glyphicon glyphicon-trash"></span>&nbsp;删除</button>
+									    </div>
+									</form>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th><input type="checkbox"/>全选</th>
+												<th>服务名称</th>
+												<th>允许交易时间</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input type="checkbox"/></td>
+												<td>参数同步</td>
+												<td>
+													<span><a href="#time-show" data-toggle="modal">00点00分00秒</a>至<a href="#time-show" data-toggle="modal">23点59分59秒</a></span>
+													<span><a href="#time-show" data-toggle="modal">00点00分00秒</a>至<a href="#time-show" data-toggle="modal">23点59分59秒</a></span>
+												</td>
+												<td>
+													<a href="#delete" data-toggle="modal">删除</a>
+												</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox"/></td>
+												<td>参数同步</td>
+												<td>
+													<span><a href="#time-show" data-toggle="modal">00点00分00秒</a>至<a href="#time-show" data-toggle="modal">23点59分59秒</a></span>
+												</td>
+												<td>
+													<a href="#delete" data-toggle="modal">删除</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<ul class="pagination">
+										<li><a href="#">&laquo;上一页</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li class="disabled"><a href="#">&raquo;下一页</a></li>
+										<li>
+											<div class="page-num">
+										       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+									        </div>
+										</li>
+									</ul>
+									
+								</div>
+							</div>
+						   <!--产品品种交易时段控制添加-->
+						     <div class="tab-pane fade" id="deal-time-add">
+						     	<form role="form" class="form-horizontal add-list">
+						     		<div class="form-group">
+										 	<label class="control-label col-sm-2">产品品种名称<span class="point-color">*</span>：</label>
+										 	<div class="col-sm-3 padding-div">
+												<input type="text" class="form-control"> 
+											</div> 
+									</div> 
+									<div class="form-group">
+										 	<label class="control-label col-sm-2">服务名称<span class="point-color">*</span>：</label>
+										 	<div class="col-sm-3 padding-div">
+												<select class="form-control" >
+											 		<option>———请选择———</option>
+											 		<option>允许</option>
+											 		<option>不允许</option>
+											 	</select> 
+											</div> 
+									</div>
+									<div class="form-group">
+										 	<label class="control-label col-sm-2">开始时间<span class="point-color">*</span>：</label>
+										 	<div class="col-sm-3 padding-div">
+												<input type="text" class="form-control"/>
+											</div> 
+									</div>
+									<div class="form-group">
+										 	<label class="control-label col-sm-2">结束时间<span class="point-color">*</span>：</label>
+										 	<div class="col-sm-3 padding-div">
+												<input type="text" class="form-control"/>
+											</div> 
+									</div>  
+									<div class="add-footer row">
+										 	<div class="col-sm-4 col-sm-offset-4">
+											 	<button type="submit" class="btn btn-info">保&nbsp;存</button>
+											 	<button type="button" class="btn btn-default">返&nbsp;回</button>
+											</div>
+									</div>
+								</form>
+						     </div>
+						   <!--大额存单产品品种机构额度控制-->
+						     <div class="tab-pane fade clearfix " id="organize-limit-control">
+						     	 <div class="organization-left col-sm-3">
+									<p>组织机构<span class="glyphicon glyphicon-refresh"></span></p>
+								</div>
+								<div class="organization-right col-sm-9">
+									<ul class="nav nav-tabs" style="margin-bottom:5px;">
+										<li class="active in"><a href="#limit-control-list" data-toggle="tab">产品品种机构额度控制列表</a></li>
+										<li ><a href="#limit-control-change" data-toggle="tab">产品品种机构额度控制修改</a></li>
+									</ul>
+									<div class="tab-content">
+										<!--大额存单产品品种机构额度控制列表-->
+										<div class="tab-pane fade active in" id="limit-control-list">
+											<div class="table-responsive">
+												 <table class="table table-striped table-bordered">
+													<thead>
+														<tr>
+															<th><input type="checkbox"/>全选</th>
+															<th>产品品种标识</th>
+															<th>代销机构代码</th>
+															<th>已分配公共额度</th>
+															<th>已分配个人额度</th>
+															<th>已分配机构额度</th>
+															<th>已使用公共额度</th>
+															<th>已使用个人额度</th>
+															<th>已使用机构额度</th>
+															<th>操作</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td><input type="checkbox"/></td>
+															<td>234</td>
+															<td>234</td>
+															<td>111</td>
+															<td>11</td>
+															<td>2户</td>
+															<td>22</td>
+															<td>2户</td>
+															<td>2户</td>
+															<td>
+																<a href="#product-type-control" data-toggle="tab" >修改</a>
+																<a href="#delete" data-toggle="modal" >删除</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<ul class="pagination">
+													<li><a href="#">&laquo;上一页</a></li>
+													<li><a href="#">1</a></li>
+													<li><a href="#">2</a></li>
+													<li><a href="#">3</a></li>
+													<li class="disabled"><a href="#">&raquo;下一页</a></li>
+													<li>
+														<div class="page-num">
+													       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+												        </div>
+													</li>
+												</ul>
+											</div> 
+										</div>
+										<!--大额存单产品品种机构额度控制修改-->
+										<div class="tab-pane fade" id="limit-control-change">
+											<form role="form" class="form-horizontal add-list">
+												<div class="form-group">
+													 	<label class="control-label col-sm-3">产品品种名称：</label>
+													 	<div class="col-sm-3 padding-div">
+															<input type="text" class="form-control"/>
+														</div>
+														<label class="control-label col-sm-3">销售机构代码：</label>
+													 	<div class="col-sm-3 padding-div">
+															<input type="text" class="form-control"/>
+														</div>
+												</div> 
+												<div class="form-group">
+													 	<label class="control-label col-sm-3">已分配公共额度：</label>
+													 	<div class="col-sm-3 padding-div">
+															<input type="text" class="form-control"/>
+														</div>
+														<label class="control-label col-sm-3">已分配个人额度：</label>
+													 	<div class="col-sm-3 padding-div">
+															<input type="text" class="form-control"/>
+														</div>
+												</div> 
+												<div class="form-group">
+													 	<label class="control-label col-sm-3">已分配机构额度：</label>
+													 	<div class="col-sm-3 padding-div">
+															<input type="text" class="form-control"/>
+														</div>
+														<label class="control-label col-sm-3">已使用公共额度：</label>
+													 	<div class="col-sm-3 padding-div">
+															<input type="text" class="form-control"/>
+														</div>
+												</div> 
+												<div class="form-group">
+													 	<label class="control-label col-sm-3">已使用个人额度：</label>
+													 	<div class="col-sm-3 padding-div">
+															<input type="text" class="form-control"/>
+														</div>
+														<label class="control-label col-sm-3">已使用机构额度：</label>
+													 	<div class="col-sm-3 padding-div">
+															<input type="text" class="form-control"/>
+														</div>
+												</div>  
+												<div class="form-group">
+													 	<label class="control-label col-sm-3">待复核公共额度调整：</label>
+													 	<div class="col-sm-3 padding-div">
+															<input type="text" class="form-control"/>
+														</div>
+														<label class="control-label col-sm-3">待复核个人额度调整：</label>
+													 	<div class="col-sm-3 padding-div">
+															<input type="text" class="form-control"/>
+														</div>
+												</div>
+												<div class="form-group">
+													 	<label class="control-label col-sm-3">待复核机构额度调整：</label>
+													 	<div class="col-sm-3 padding-div">
+															<input type="text" class="form-control"/>
+														</div>
+														<label class="control-label col-sm-3">复核状态：</label>
+													 	<div class="col-sm-3 padding-div">
+															<input type="text" class="form-control"/>
+														</div>
+												</div> 
+												<div class="form-group">
+													 	<label class="control-label col-sm-3">审核机构：</label>
+													 	<div class="col-sm-3 padding-div">
+															<input type="text" class="form-control"/>
+														</div>
+														<label class="control-label col-sm-3">审核柜员：</label>
+													 	<div class="col-sm-3 padding-div">
+															<input type="text" class="form-control"/>
+														</div>
+												</div> 
+											    <div class="add-footer row">
+													 	<div class="col-sm-6 col-sm-offset-4">
+														 	<button type="button" class="btn btn-info">保&nbsp;存</button>
+														 	<button type="button" class="btn btn-default ">返&nbsp;回</button>
+														 	<button type="button" class="btn btn-danger">删&nbsp;除</button>
+														</div>
+												</div> 
+											</form> 
+										</div> 
+									</div>
+								</div>
+						     </div>
+						   <!--账号信息列表-->
+						     <div class="tab-pane fade " id="account-message-list">
+								<div class="header">
+									<form class="form-inline">
+									   <div class="form-group">
+									   	    <label>账户类型：</label><select class="form-control">
+									         	     <option>———请选择———</option>
+									         	     <option>银行账号</option>
+									              </select>
+									   </div>
+									   <div class="form-group">
+									   	    <label>账号：</label><input type="text" class="form-control" />
+									   </div>
+										<div class="form-group">
+											<label>账号户名：</label><input type="text" class="form-control" /> 
+										</div>
+									    
+										<div class="form-group">
+											<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+											<button class="btn btn-info "><span class="glyphicon glyphicon-refresh"></span>&nbsp;重置</button>
+											<button class="btn btn-danger "><span class="glyphicon glyphicon-trash"></span>&nbsp;删除</button>
+									    </div>
+									</form>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th><input type="checkbox"/>全选</th>
+												<th>产品品种名称</th>
+												<th>账户类型</th>
+												<th>账号科目</th>
+												<th>账号</th>
+												<th>账号户名</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input type="checkbox"/></td>
+												<td>大额存单</td>
+												<td>本金归集账户</td>
+												<td>大额存单</td>
+												<td>大额存单</td>
+												<td>大额存单</td>
+												<td>
+													<a href="#account-message-add" data-toggle="tab" >修改</a>
+													<a href="#delete" data-toggle="modal" >删除</a>
+													<a href="" >账户验证</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<ul class="pagination">
+										<li><a href="#">&laquo;上一页</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li class="disabled"><a href="#">&raquo;下一页</a></li>
+										<li>
+											<div class="page-num">
+										       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+									        </div>
+										</li>
+									</ul> 
+								</div>
+							</div>
+						   <!--产品品种信息添加-->
+							 <div class="tab-pane fade " id="account-message-add">
+								<form role="form" class="form-horizontal add-list">
+									<div class="form-group">
+										 	<label class="control-label col-sm-2">产品品种名称<span class="point-color">*</span>：</label>
+										 	<div class="col-sm-3 padding-div">
+												<input type="text" class="form-control"> 
+											</div> 
+									</div> 
+									<div class="form-group">
+										 	<label class="control-label col-sm-2">账户类型<span class="point-color">*</span>：</label>
+										 	<div class="col-sm-3 padding-div">
+												<select class="form-control">
+											 		<option>———请选择———</option>
+											 		<option>———请选择———</option>
+											 	</select>
+											</div> 
+									</div>  
+									<div class="form-group">
+										 	<label class="control-label col-sm-2">资金渠道：</label>
+										 	<div class="col-sm-3 padding-div">
+												<select class="form-control">
+											 		<option>———请选择———</option>
+											 		<option>———请选择———</option>
+											 	</select>
+											</div> 
+									</div>
+									<div class="form-group">
+										 	<label class="control-label col-sm-2">账号科目：</label>
+										 	<div class="col-sm-3 padding-div">
+												<input type="text" class="form-control"/>
+											</div> 
+									</div> 
+									<div class="form-group">
+										 	<label class="control-label col-sm-2">账号<span class="point-color">*</span>：</label>
+										 	<div class="col-sm-3 padding-div">
+												<input type="text" class="form-control"> 
+											</div> 
+									</div> 
+									<div class="form-group">
+										 	<label class="control-label col-sm-2">账号户名：</label>
+										 	<div class="col-sm-3 padding-div">
+												<input type="text" class="form-control"> 
+											</div> 
+									</div>  
+									<div class="form-group span-foot ">
+												 	<div class="col-sm-2 col-sm-offset-1">维护机构：00000</div>
+												 	<div class="col-sm-2">维护柜员：00000</div>
+												 	<div class="col-sm-4">维护时间：2016-08-15 08:46:28</div>
+									 </div>
+									 <div class="add-footer row">
+										 	<div class="col-sm-4 col-sm-offset-2">
+											 	<button type="submit" class="btn btn-info">保&nbsp;存</button>
+											 	<button type="button" class="btn btn-default">返&nbsp;回</button>
+											</div>
+									</div>
+								</form>
+							 </div>
+						</div>
+						
+						<!--时间段显示modal-->
+						<div class="modal fade" id="time-show" data-backdrop="false">
+							<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												允许交易时间段
+												<button class="close" data-dismiss="modal"><span>&times;</span></button>
+											</div>
+											<div class="modal-body">
+												<form role="form" class="form-horizontal add-list">
+													<div class="form-group">
+														 	<label class="col-sm-3 col-sm-offset-1">开始时间<span class="point-color">*</span>：</label>
+														 	<div class="col-sm-7 ">
+																<input type="text" class="form-control"> 
+															</div> 
+													</div>
+													<div class="form-group">
+														 	<label class=" col-sm-3 col-sm-offset-1">结束时间<span class="point-color">*</span>：</label>
+														 	<div class="col-sm-7">
+																<input type="text" class="form-control"> 
+															</div> 
+													</div> 
+										        </form>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
+										        <button type="submit" class="btn btn-danger btn-sm" data-dismiss="modal">删除</button>
+											</div>
+										</div>
+							</div>
+						</div>
+						<!--品种限额modal-->
+						<div class="modal fade " id="type-limit" >
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<span></span>产品品种限额配置 
+									</div> 
+									<div class="modal-body modal-padding"  >
+										<form>
+											<div class="table-responsive" >
+												<div class="table-head">
+													<div class="head1">交易类型</div>
+													<div class="head2">客户类型</div>
+													<div class="head3">交易限额标识</div>
+													<div class="head4">操作</div>
+												</div>
+												<table class="table table-bordered" >
+													 
+													<tbody >
+														
+														<tr>
+															<td rowspan="2" class="rows2">
+																申购
+															</td>
+															<td>个人</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />a
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																</div> 
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														<tr>
+															<td>机构</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />a
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																</div>
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														
+														<tr>
+															<td rowspan="2" class="rows2">
+																认购
+															</td>
+															<td>个人</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />a
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																</div>
+															</td>
+															
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														<tr>
+															<td>机构</td>
+															<td>
+															  <div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />a
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																</div>
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														
+														<tr>
+															<td rowspan="2" class="rows2">
+																赎回
+															</td>
+															<td>个人</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />a
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																</div>
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														<tr>
+															<td>机构</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />a
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																</div>
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														
+														<tr>
+															<td rowspan="2" class="rows2">
+																定投
+															</td>
+															<td>个人</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />a
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																</div>
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														<tr>
+															<td>机构</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />a
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																</div>
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														
+														<tr>
+															<td rowspan="2" class="rows2">
+																转让
+															</td>
+															<td>个人</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />a
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																</div>
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														<tr>
+															<td>机构</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />a
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																</div>
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														
+													</tbody>
+													
+												</table>
+											</div>
+										</form>	
+										
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
+										<button type="submit" class="btn btn-info btn-sm" data-dismiss="modal">保存</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					    <!--转让参数modal-->
+					    <div class="modal fade" id="transfer-para">
+					    	<div class="modal-dialog">
+					    		<div class="modal-content">
+					    			<div class="modal-header">
+					    				<span></span>品种转让参数配置
+					    				<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+					    			</div>
+					    			<div class="modal-body row">
+					    				 <form role="form" class="form-horizontal add-list">
+					    				 	<div class="form-group">
+												<label class="control-label col-sm-3">产品品种标识<span class="point-color">*</span>：</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control"> 
+												</div> 
+												<label class="control-label col-sm-3">转让有效时间<span class="point-color">*</span>：</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control"> 
+												</div> 
+											</div> 
+											<div class="form-group">
+												<label class="control-label col-sm-3">最大允许折扣率<span class="point-color">*</span>：</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control"> 
+												</div> 
+												<label class="control-label col-sm-3">最大允许溢出率<span class="point-color">*</span>：</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control"> 
+												</div> 
+											</div> 
+											<div class="form-group">
+												<label class="control-label col-sm-3">手续费最低金额<span class="point-color">*</span>：</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control"> 
+												</div> 
+												<label class="control-label col-sm-3">手续费最高金额<span class="point-color">*</span>：</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control"> 
+												</div> 
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-3">定价手续费率<span class="point-color">*</span>：</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control"> 
+												</div> 
+												<label class="control-label col-sm-3">定价手续费折扣率<span class="point-color">*</span>：</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control"> 
+												</div> 
+											</div> 
+											<div class="form-group">
+												<label class="control-label col-sm-3">委托手续费率<span class="point-color">*</span>：</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control"> 
+												</div> 
+												<label class="control-label col-sm-3">委托手续费折扣率<span class="point-color">*</span>：</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control"> 
+												</div> 
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-3">审核份额<span class="point-color">*</span>：</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control"> 
+												</div> 
+												<label class="control-label col-sm-3">备注：<span class="point-color">*</span>：</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control"> 
+												</div> 
+											</div> 
+										</form>
+					    			</div>
+					    			<div class="modal-footer">
+										<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
+										<button type="submit" class="btn btn-info btn-sm" data-dismiss="modal">保存</button>
+									</div>
+					    		</div>
+					    	</div>
+					    </div>
+					    <!--交易模式modal-->
+					    <div class="modal fade" id="trade-mode-modal" data-backdrop="false">
+					    	<div class="modal-dialog">
+					    		<div class="modal-content">
+					    		  <form>	
+					    			<div class="modal-header">
+					    				<span>大额存单品种</span><span>交易模式</span><span>修改</span>
+					    				<button class="close" data-dismiss="modal">&times;</button>
+					    			</div>
+					    			<div class="modal-body">
+					    				<div class="form-group">
+					    					<label class="checkbox-inline">
+					    						<input type="checkbox"><span>点击成交</span>
+					    					</label>
+					    					<label class="checkbox-inline">
+					    						<input type="checkbox"><span>做市交易</span>
+					    					</label>
+					    					<label class="checkbox-inline">
+					    						<input type="checkbox"><span>定向交易</span>
+					    					</label>
+					    					<label class="checkbox-inline">
+					    						<input type="checkbox"><span>RFQ大额询价交易</span>
+					    					</label>
+					    					<label class="checkbox-inline">
+					    						<input type="checkbox"><span>交易模型名称</span>
+					    					</label>
+					    					<label class="checkbox-inline">
+					    						<input type="checkbox"><span>模式</span>
+					    					</label> 
+					    				</div>  
+					    			</div>
+					    			<div class="modal-footer">
+										<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
+										<button type="submit" class="btn btn-info btn-sm" data-dismiss="modal">保存</button>
+									</div>
+								  </form>
+					    		</div>
+					    	</div>
+					    </div>
+					    <!--价格偏离modal-->
+					    <div class="modal fade" id="price-deviate-modal" data-backdrop="false">
+					    	<div class="modal-dialog">
+							    <form>
+							      <div class="modal-content">
+									<div class="modal-header">
+										<span>大额存单</span><span>价格偏离度</span><span>修改</span>
+										<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+									</div>
+									<div class="modal-body">
+										<div class="table-responsive">
+											<table class="table table-bordered">
+												<thead>
+													<tr>
+														<th>交易模式</th>
+														<th>客户类型</th>
+														<th>偏离度上限</th>
+														<th>偏离度预警值</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td rowspan="2" class="rows2">
+															点击成交
+														</td>
+														<td>个人</td>
+														<td>
+															 <input type="text" class="form-control"  />
+														</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+													</tr>
+													<tr>
+														<td>机构</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+													</tr>
+													
+													<tr>
+														<td rowspan="2" class="rows2">
+															定向交易
+														</td>
+														<td>个人</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+													</tr>
+													<tr>
+														<td>机构</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+													</tr>
+													
+													<tr>
+														<td rowspan="2" class="rows2">
+															RFQ大额查询交易
+														</td>
+														<td>个人</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+													</tr>
+													<tr>
+														<td>机构</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+													</tr>
+													
+													<tr>
+														<td rowspan="2" class="rows2">
+															交易模型名称
+														</td>
+														<td>个人</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+													</tr>
+													<tr>
+														<td>机构</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+													</tr>
+													
+													<tr>
+														<td rowspan="2" class="rows2">
+															模型
+														</td>
+														<td>个人</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+													</tr>
+													<tr>
+														<td>机构</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+														<td>
+															<input type="text" class="form-control"  />
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
+										<button type="submit" class="btn btn-info btn-sm" data-dismiss="modal">保存</button>
+									</div>
+								</div>
+							
+							    </form>
+					    	</div>
+						</div>
+					    <!--品种限额modal-->
+						<div class="modal fade " id="property-out">
+							<div class="modal-dialog">
+							   <form>
+							   	   <div class="modal-content">
+										<div class="modal-header">
+											<span>大额存单</span>资产接出服务信息配置
+											<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+										</div>
+										<div class="modal-body">
+											<div class="table-responsive">
+												<table class="table table-bordered">
+													<thead>
+														<tr>
+															<th>服务名称</th>
+															<th>接出渠道选择</th>
+															<th>操作</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="2" class="rows2">
+																<span>参数同步</span>
+															</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />skdjf
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />财富理财
+																	</label>
+																	
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />渠道名称渠道名称渠道名称渠道名称渠道名称渠道名称渠道名称渠道名称
+																	</label>
+																</div> 
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />skdjf
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />财富理财
+																	</label>
+																	
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />渠道名称  
+																	</label>
+																</div> 
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														
+														<tr>
+															<td rowspan="2" class="rows2">
+																<span>客户资产查询</span>
+															</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />skdjf
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />财富理财
+																	</label>
+																	
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />渠道名称 
+																	</label>
+																</div> 
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />skdjf
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />财富理财
+																	</label>
+																	
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />渠道名称 
+																	</label>
+																</div> 
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														
+														<tr>
+															<td rowspan="2" class="rows2">
+																<span>客户冻结记录查询</span>
+															</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />skdjf
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />财富理财
+																	</label>
+																	
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />渠道名称 
+																	</label>
+																</div> 
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />skdjf
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />财富理财
+																	</label>
+																	
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />渠道名称 
+																	</label>
+																</div> 
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														
+														<tr>
+															<td rowspan="2" class="rows2">
+																<span>参数同步</span>
+															</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />skdjf
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />财富理财
+																	</label>
+																	
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />渠道名称 
+																	</label>
+																</div> 
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />skdjf
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />财富理财
+																	</label>
+																	
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />渠道名称 
+																	</label>
+																</div> 
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														
+														<tr>
+															<td rowspan="2" class="rows2">
+																<span>参数同步</span>
+															</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />skdjf
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />财富理财
+																	</label>
+																	
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />渠道名称 
+																	</label>
+																</div> 
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />skdjf
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />财富理财
+																	</label>
+																	
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />渠道名称 
+																	</label>
+																</div> 
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														
+														<tr>
+															<td rowspan="2" class="rows2">
+																<span>客户资产查询</span>
+															</td>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />skdjf
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />财富理财
+																	</label>
+																	
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />渠道名称 
+																	</label>
+																</div> 
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="form-group">
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />skdjf
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />b
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />c
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />d
+																	</label>
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />财富理财
+																	</label>
+																	
+																	<label class="radio-inline">
+																		<input type="radio" name="sg-person" />渠道名称 
+																	</label>
+																</div> 
+															</td>
+															<td>
+																<button class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span>清除</button>
+															</td>
+														</tr> 
+													</tbody>
+												</table>
+											
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
+											<button type="submit" class="btn btn-info btn-sm" data-dismiss="modal">保存</button>
+										</div>
+								</div>
+							
+							   </form>
+							</div>
+						</div>
+			</div>
+		       
+		       <!--页面首页右侧工作日控制-->
+			   <div class="tab-pane fade " id="work-control">
+						<div class="work-control-left">
+							<div class="calendar-head">
+								<div class="header1">产品品种：大额存单</div>
+								<div class="header2">
+									<span class="mouth">8月</span><span class="year">2016</span>
+								</div>
+								<div class="header3">
+									<div class="btn-group btn-group-sm">
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span>上一个月</button>
+										<button type="button" class="btn btn-default">下一个月<span class="glyphicon glyphicon-chevron-right"></span></button>
+									</div>
+									<button type="button" class="btn btn-default btn-sm">关闭</button>
+								</div>
+							</div>
+						    <table class="table table-bordered ">
+						    	<thead>
+						    		<tr>
+						    			<th>星期日</th>
+						    			<th>星期一</th>
+						    			<th>星期二</th>
+						    			<th>星期三</th>
+						    			<th>星期四</th>
+						    			<th>星期五</th>
+						    			<th>星期六</th>
+						    		</tr>
+						    	</thead>
+						    	<tbody>
+						    		<tr>
+						    			<td>
+						    				<p>31</p>
+						    				<div class="tag0">00-查询</div>
+						    				<div class="tag1">01-申购</div>
+						    				<div class="tag2">02-认购</div>
+						    				<div class="tag3">03-赎回</div>
+						    				<div class="tag4">04-定投</div>
+						    				<div class="tag5">05-转让</div>
+						    			</td>
+						    			<td>
+						    				<p>1</p>
+						    			</td>
+						    			<td>
+						    				<p>2</p>
+						    			</td>
+						    			<td>
+						    				<p>3</p>
+						    			</td>
+						    			<td>
+						    				<p>4</p>
+						    			</td>
+						    			<td>
+						    				<p>5</p>
+						    			</td>
+						    			<td>
+						    				<p>6</p>
+						    			</td>
+						    		</tr>
+						    	</tbody>
+						    </table>
+						</div>
+						<div class="work-control-right">
+							
+						</div>
+					</div>
+               <!--列表删除弹出框-->
+			   <div class="modal fade" id="delete" data-backdrop="false">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h4>系统提示</h4>
+										</div>
+										<div class="modal-body">
+											确认要删除？
+										</div>
+									    <div class="modal-footer">
+									    	<button class="btn btn-default" data-dismiss="modal">取消</button>
+									    	<button class="btn btn-default" data-dismiss="modal">确认</button>
+									    </div>
+									</div>
+								</div>
+					</div>		
+					
+	    </div>						
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/product.js" ></script>
+</html>

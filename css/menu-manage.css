@@ -1,0 +1,8 @@
+           .tab-content #menu-list .table-striped tbody tr{display: none;}
+		   .tab-content #menu-list .table-striped .first-level{display: table-row;}
+		    #menu-function-list .table-striped input{width:70px;border-radius: 5px;height: 18px;border:1px solid #CCCCCC;}
+		    .menu-function-head{background:#F5F5F5;height:40px;margin:10px 0;font-size:13px;padding-left:20px;line-height: 40px;color: #666666;}
+		    .menu-function-head span{font-weight: 700;margin-right:200px;}
+		  .menu-function-footer{padding-left: 20px;}
+           #menu-add .form-group .checkbox-inline input{vertical-align: middle;}
+           #menu-add .link .form-control{width:500px}

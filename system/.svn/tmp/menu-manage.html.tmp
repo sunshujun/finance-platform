@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/menu-manage.css" />
+		<title></title>
+	</head>
+	<body>
+		<div class="tab-content  " id="right-MyTabContent" >
+			<!--页面首页右侧切换菜单管理-->
+			<div class="tab-pane fade active in row " id="menu-manage">
+						<ul class="nav nav-tabs">
+							<li class="active in"><a href="#menu-list" data-toggle="tab">菜单列表</a></li>
+							<li ><a href="#menu-add" data-toggle="tab">菜单添加</a></li>
+							<li ><a href="#menu-function-list" data-toggle="tab" >菜单功能列表</a></li>
+						</ul>
+						<div class="tab-content">
+							<!--菜单管理列表tab页-->
+							<div class="tab-pane fade active in" id="menu-list">
+							    <div class="table-responsive">
+							    	 <table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th>名称</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="first-level">
+												<td><a  ><span class="glyphicon glyphicon-triangle-right"></span>功能菜单</a></td>
+												<td><a href="#menu-add" data-toggle="tab">添加下级菜单</a></td>
+											</tr>
+											<tr class="second-level" id="table-panel" >
+												<td><a  ><span class="glyphicon glyphicon-triangle-right"></span>我的面板</a></td>
+												<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add" data-toggle="tab">添加下级菜单</a></td>
+											</tr>
+											    <!--三级表格-->
+											     <tr class="third-table-panel third" >
+													<td><a  href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-user" href="#menu-add" data-toggle="tab"></span>个人信息</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class=" third-table-panel third" >
+													<td><a href="#menu-add" data-toggle="tab" ><span class="glyphicon glyphicon-lock"></span>修改密码</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+												 <tr class="third-table-panel third " >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-folder-open"></span>文件管理</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+												 
+											<tr class="second-level" id="table-system">
+												<td><a ><span class="glyphicon glyphicon-triangle-right"></span>系统设置</a></td>
+												<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add" data-toggle="tab">添加下级菜单</a></td>
+											</tr>
+											     <!--三级表格-->
+											     <tr class="third-table-system third change" >
+													<td><a  ><span class="glyphicon glyphicon-triangle-right"></span>系统管理</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add" data-toggle="tab">添加下级菜单</a></td>
+												 </tr>
+												     <!--四级表格-->
+												     <tr class=" forth-menu  third" >
+														<td><a  href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"></span>菜单管理</a></td>
+														<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+													 </tr>
+													 <tr class="forth-menu third" >
+														<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-user"></span>角色管理</a></td>
+														<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+													 </tr>
+													 <tr class="forth-menu third" >
+														<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-book"></span>字典管理</a></td>
+														<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+													 </tr>
+													 
+											     <tr class=" third-table-system third change" >
+													<td><a ><span class="glyphicon glyphicon-triangle-right"></span>机构用户</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add" data-toggle="tab">添加下级菜单</a></td>
+												 </tr>
+												     <!--四级表格-->
+												     <tr class="forth-user  third" >
+														<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-barcode"></span>机构管理</a></td>
+														<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+													 </tr>
+													 <tr class="forth-user third" >
+														<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-briefcase"></span>用户管理</a></td>
+														<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+													 </tr>
+													 
+												 <tr class="third-table-system third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-search"></span>日志查询</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+												 <tr class="third-table-system third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-comment"></span>版本信息</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											      
+											<tr class="second-level" id="table-parameter">
+												<td><a ><span class="glyphicon glyphicon-triangle-right"></span>参数管理</a></td>
+												<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add" data-toggle="tab">添加下级菜单</a></td>
+											</tr>
+											      <!--三级表格-->
+											     <tr class="third-table-parameter third" >
+													<td><a href="#menu-add" data-toggle="tab" ><span class="glyphicon glyphicon-asterisk"></span>系统参数管理</a></td>
+													<td><a href="#menu-add">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add" data-toggle="tab">维护功能</a></td>
+												 </tr>
+											     <tr class=" third-table-parameter third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-hand-right"></span>系统节点注册</a></td>
+													<td><a href="#menu-add">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+												 <tr class="third-table-parameter third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-book"></span>应用字典配置</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class="third-table-parameter third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-certificate"></span>接入节点控制</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class="third-table-parameter third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span>错误信息登记</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+												 <tr class="third-table-parameter third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-comment"></span>服务信息注册</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class="third-table-parameter third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-bookmark"></span>限额标识配置</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class="third-table-parameter third"  >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-flash"></span>交易类型登记</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+												 <tr class="third-table-parameter third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-transfer"></span>交易模式</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr> 
+												 
+											<tr class="second-level" id="table-channel">
+												<td><a ><span class="glyphicon glyphicon-triangle-right"></span>渠道管理</a></td>
+												<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add" data-toggle="tab">添加下级菜单</a></td>
+											</tr>
+											     <!--三级表格-->
+											     <tr class="third-table-channel third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-globe"></span>销售渠道配置</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class=" third-table-channel third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-tasks"></span>渠道服务配置</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+												 <tr class="third-table-channel third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-sort"></span>系统接出配置</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											
+											
+											<tr class="second-level" id="table-market">
+												<td><a ><span class="glyphicon glyphicon-triangle-right"></span>市场管理</a></td>
+												<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add" data-toggle="tab">添加下级菜单</a></td>
+											</tr>
+											     <!--三级表格-->
+											     <tr class="third-table-market third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-volume-up"></span>公告信息</a></td>
+													<td><a href="#menu-add">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add" data-toggle="tab">维护功能</a></td>
+												 </tr>
+											     <tr class=" third-table-market third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-tag"></span>系统消息事件</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+												 <tr class="third-table-market third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"></span>管理机构信息</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class="third-table-market third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-record"></span>发行机构信息</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class=" third-table-market third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-phone-alt"></span>销售机构信息</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+												 <tr class="third-table-market third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-th-large"></span>银行信息/a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											
+											<tr class="second-level" id="table-product">
+												<td><a ><span class="glyphicon glyphicon-triangle-right"></span>产品管理</a></td>
+												<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add" data-toggle="tab">添加下级菜单</a></td>
+											</tr>
+											      <!--三级表格-->
+											     <tr class="third-table-product third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-th-list"></span>产品品种信息</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class=" third-table-product third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"></span>系统消息事件</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+												 
+											<tr class="second-level" id="table-client">
+												<td><a ><span class="glyphicon glyphicon-triangle-right"></span>客户管理</a></td>
+												<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add" data-toggle="tab">添加下级菜单</a></td>
+											</tr>
+											      <!--三级表格-->
+											     <tr class="third-table-client third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-user"></span>客户信息</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class=" third-table-client third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-pencil"></span>客户合约登记</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											<tr class="second-level" id="table-trade">
+												<td><a ><span class="glyphicon glyphicon-triangle-right"></span>交易管理</a></td>
+												<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add" data-toggle="tab">添加下级菜单</a></td>
+											</tr>
+											     <!--三级表格-->
+											     <tr class="third-table-trade third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-star"></span>买单委托</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class=" third-table-trade third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-star-empty"></span>卖单委托</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class="third-table-trade third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-new-window"></span>成交信息</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class=" third-table-trade third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-grain"></span>交易流水</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class="third-table-trade third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-tree-deciduous"></span>资产交易流水</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     
+											<tr class="second-level" id="table-sta">
+												<td><a ><span class="glyphicon glyphicon-triangle-right"></span>查询统计管理</a></td>
+												<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add" data-toggle="tab">添加下级菜单</a></td>
+											</tr>
+											     <!--三级表格-->
+											     <tr class="third-table-sta third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-star"></span>统计报表</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+												 
+											<tr class="second-level" id="table-risk">
+												<td><a ><span class="glyphicon glyphicon-triangle-right"></span>风险管理</a></td>
+												<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add">添加下级菜单</a></td>
+											</tr>
+											     <!--三级表格-->
+											     <tr class="third-table-risk third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span>差错交易等级</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class=" third-table-risk third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-exclamation-sign"></span>价格偏离度控制</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class="third-table-risk third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-stats"></span>银行cd交易数据</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class=" third-table-risk  third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-cd"></span>银行cd收益率基准</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+												 
+											<tr class="second-level" id="table-move">
+												<td><a ><span class="glyphicon glyphicon-triangle-right"></span>运维管理</a></td>
+												<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-add" data-toggle="tab">添加下级菜单</a></td>
+											</tr>
+											     <!--三级表格-->
+											     <tr class="third-table-move third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span>系统数据备份清理</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class=" third-table-move third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-exclamation-sign"></span>系统批处理运行</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+											     <tr class="third-table-move third" >
+													<td><a href="#menu-add" data-toggle="tab"><span class="glyphicon glyphicon-stats"></span>系统批处理控制</a></td>
+													<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a><a href="#menu-function-list" data-toggle="tab" >维护功能</a></td>
+												 </tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							
+							<!--table中删除弹出框-->
+							    <div class="modal fade" id="table-delete" data-backdrop="false">
+							    	<div class="modal-dialog">
+							    		<div class="modal-content">
+							    			<div class="modal-header">
+							    				<h3>系统提示！</h3>
+							    			</div>
+							    			<div class="modal-body">
+								    			确定要删除？
+								    		</div>
+								    	    <div class="modal-footer">
+								    	    	<button class="btn btn-default" data-dismiss="modal">取消</button>
+								    	    	<button class="btn btn-default" data-dismiss="modal">确认</button>
+								    	    </div>
+							    		</div>
+							    	</div>
+							    </div>
+							
+								
+							<!--菜单管理添加tab页-->
+							<div class="tab-pane fade row" id="menu-add">
+								
+								<form class="form-horizontal  form-padding form-font">
+									<div class="form-group">
+										<label class="col-sm-2 control-label">上级功能菜单:</label>
+										<div class="col-sm-3 col-md-3 padding-div">
+											<div class="input-group">
+												<input type="text" class="form-control" aria-describedby="basic-addon1">
+												<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search"></span></span>
+											</div>
+											<span class="point-color">*</span>
+										</div>
+										
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label">菜单ID:</label>
+										<div class="col-sm-3">
+											<input type="text" class="form-control">
+										</div>
+										<span class="point-color">*</span>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label">名称:</label>
+										<div class="col-sm-3">
+											<input type="text" class="form-control">
+										</div>
+										<span class="point-color">*</span>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label">是否功能菜单:</label>
+										<div class="col-sm-1 col-md-1 ">
+											<label for="no-menu" class="radio-inline">
+												<input type="radio" id="no-menu">否
+											</label>
+											<label for="yes-menu" class="radio-inline">
+												<input type="radio" id="yes-menu">是
+											</label>
+											
+										</div>
+										<span class="col-sm-3 point-out point-title"><span class="point-color">*</span>功能菜单不允许下挂下级菜单</span>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label">链接:</label>
+										<div class="col-sm-3">
+											<input type="text" class="form-control">
+										</div>
+										<span class="point-title"><span class="point-color">*</span>点击菜单跳转页面</span>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label">菜单类型:</label>
+										<div class="col-sm-3">
+											<select class="form-control">
+												<option>菜单一</option>
+												<option>菜单二</option>
+												<option>菜单三</option>
+											</select>
+										</div>
+										<span class="point-title"><span class="point-color">*</span>菜单为系统级的，不允许修改和导出</span>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label">是否激活:</label>
+										<div class="col-sm-3">
+											<select class="form-control">
+												<option>选项一</option>
+												<option>选项二</option>
+												<option>选项三</option>
+											</select>
+										</div>
+										<span class="point-title"><span class="point-color">*</span>该菜单是否显示到系统中</span>
+								    </div>
+								    <div class="form-group">
+								    	<label class="col-sm-2 control-label">排序号:</label>
+								    	<div class="col-sm-3">
+								    		<input type="text" class="form-control">
+								    	</div>
+								    	<span class="point-title"><span class="point-color">*</span>该菜单显示顺序</span>
+								    </div>
+								    <div class="form-group">
+								    	<label class="col-sm-2 control-label">菜单描述:</label>
+								    	<div class="col-sm-5">
+								    		<textarea class="form-control"></textarea>
+								    	</div>
+								    </div>
+								</form>
+								
+							</div>
+						
+						    <!--菜单功能列表tab页-->
+						    <div class="tab-pane fade" id="menu-function-list">
+						    	<div class="menu-function-head">
+						    		菜单名称：<span>个人信息</span>菜单链接：<span>http://sdkjgldjlgfkd.com</span>
+						    	</div>
+						    	<div class="table-responsive">
+						    		<table class="table-striped table-bordered table">
+							    		<thead>
+							    			<tr>
+							    				<th>功能ID</th>
+							    				<th>功能名称</th>
+							    				<th>功能权限</th>
+							    				<th>功能描述</th>
+							    				<th>排序</th>
+							    				<th>操作</th>
+							    			</tr>
+							    		</thead>
+							    		<tbody>
+							    			<tr>
+							    				<td>edit</td>
+							    				<td>修改</td>
+							    				<td>user</td>
+							    				<td>edit</td>
+							    				<td><input type="text"/></td>
+							    				<td><a href="#menu-add" data-toggle="tab">修改</a><a href="#table-delete" data-toggle="modal">删除</a></td>
+							    			</tr>
+							    		</tbody>
+							    	</table>
+						    	
+						    	</div>
+						    	<div class="menu-function-footer">
+						    		<button class="btn btn-primary">保存排序</button>
+						    	</div>
+						    </div>
+						</div>
+					</div>
+			<!--列表删除弹出框-->
+			<div class="modal fade" id="delete" data-backdrop="false">
+									<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h4>系统提示</h4>
+										</div>
+										<div class="modal-body">
+											确认要删除？
+										</div>
+									    <div class="modal-footer">
+									    	<button class="btn btn-default" data-dismiss="modal">取消</button>
+									    	<button class="btn btn-default" data-dismiss="modal">确认</button>
+									    </div>
+									</div>
+								    </div>
+			</div>					
+ 		</div>
+ 		
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/system.js" ></script>
+</html>

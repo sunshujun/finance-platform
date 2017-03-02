@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css"  type="text/css"/>
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/common.css">
+		<title></title>
+	</head>
+	<body>
+		<div class="tab-content " id="right-MyTabContent" >
+					<!--渠道服务配置tab-->
+					<div class="tab-pane fade active in " id="channel-service">
+					   <div class="move">选中了<span class="span1">1</span>行数据，交易代码为:<span class="span2">7055</span></div>
+					   <div class="row">
+					   	   <!--渠道服务之销售渠道tab-->
+						  <div class="col-sm-5 col-xs-12">
+						  	<ul class="nav nav-tabs">
+								<li class="active in"><a href="#channel-service-left" data-toggle="tab">销售渠道</a></li>
+							</ul>
+							<div class="tab-content">
+								<!--销售渠道配置tab页-->
+							 <div class="tab-pane fade active in" id="channel-service-left">
+									<div class="header">
+										<form class="form-inline">
+											<div class="form-group">
+												<label>渠道名称：</label><select class="form-control inputOption">
+																	        <option value="">————请选择————</option>
+																	        <option value="">柜面渠道</option>
+																	        <option value="">网上银行</option>
+																	        <option value="">手机银行</option>
+																        </select>
+											</div>
+											<div class="btn-group">
+												<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+												<button class="btn btn-info add-ser"><span class="glyphicon glyphicon-plus"></span>&nbsp;添加</button>
+										    </div>
+										</form>
+									</div>
+									<div class="table-responsive">
+										<table class="table table-striped table-bordered">
+											<thead>
+												<tr>
+													<th><label for="channel-ser" class="checkbox-inline"><input type="checkbox" id="channel-ser"/>全选</label></th>
+													<th class="serNum">服务代码</th>
+													<th class="serName">服务名称</th>
+													<th>服务类型</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input  type="checkbox" /></td>
+													<td class="serNum">7002</td>
+													<td class="serName">客户资产查询</td>
+													<td>平台类</td>
+												</tr>
+												<tr>
+													<td><input  type="checkbox" /></td>
+													<td class="serNum">7102</td>
+													<td class="serName">卖单委托</td>
+													<td>平台类</td>
+												</tr>
+												<tr>
+													<td><input  type="checkbox" /></td>
+													<td class="serNum">7002</td>
+													<td class="serName">客户资产查询</td>
+													<td>平台类</td>
+												</tr>
+												<tr>
+													<td><input  type="checkbox" /></td>
+													<td class="serNum">7102</td>
+													<td class="serName">卖单委托</td>
+													<td>平台类</td>
+												</tr>
+											</tbody>
+										</table>
+										<ul class="pagination">
+											<li><a href="#">&laquo;上一页</a></li>
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li class="disabled"><a href="#">&raquo;下一页</a></li>
+											<li>
+												<div class="page-num">
+											       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+										        </div>
+											</li>
+										</ul> 
+									</div>
+								</div>
+							</div>	
+						  </div>
+						  <!--渠道服务之服务信息tab-->
+						  <div class="col-sm-7 col-xs-12">
+						  	<ul class="nav nav-tabs">
+								<li class="active in"><a href="#channel-service-right" data-toggle="tab">销售渠道服务信息</a></li>
+							</ul>
+							<div class="tab-content">
+								<!--销售渠道配置tab页-->
+							 <div class="tab-pane fade active in" id="channel-service-right">
+									<div class="header">
+										<form class="form-inline">
+											<div class="btn-group">
+												<button class="btn btn-warning remove-ser"><span class="glyphicon glyphicon-remove"></span>&nbsp;移除服务</button>
+												<button class="btn btn-success "><span class="glyphicon glyphicon-refresh"></span>&nbsp;刷新所有缓冲</button>
+										    </div>
+										</form>
+									</div>
+									<div class="table-responsive">
+										<table class="table table-striped table-bordered">
+											<thead>
+												<tr>
+													<th><label for="channel-serright" class="checkbox-inline"><input type="checkbox" id="channel-serright"/>全选</label></th>
+													<th>渠道标识</th>
+													<th>渠道名称</th>
+													<th>服务代码</th>
+													<th>服务名称</th>
+													<th>启停标志</th>
+													<th>操作</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input  type="checkbox"/></td>
+													<td>101</td>
+													<td>柜面渠道</td>
+													<td class="serNum">7003</td>
+													<td class="serName">报价查询</td>
+													<td><a href="#">开启</a></td>
+													<td><a href="#" data-toggle="tab" >修改</a><a href="#delete" data-toggle="modal" >删除</a></td>
+											    </tr>
+											    <tr>
+													<td><input  type="checkbox"/></td>
+													<td>101</td>
+													<td>柜面渠道</td>
+													<td class="serNum">7001</td>
+													<td class="serName">参数同步</td>
+													<td><a href="#">开启</a></td>
+													<td><a href="#" data-toggle="tab" >修改</a><a href="#delete" data-toggle="modal" >删除</a></td>
+											    </tr>
+											    <tr>
+													<td><input  type="checkbox"/></td>
+													<td>101</td>
+													<td>柜面渠道</td>
+													<td class="serNum">7003</td>
+													<td class="serName">报价查询</td>
+													<td><a href="#">开启</a></td>
+													<td><a href="#" data-toggle="tab" >修改</a><a href="#delete" data-toggle="modal" >删除</a></td>
+											    </tr>
+											    <tr>
+													<td><input  type="checkbox"/></td>
+													<td>101</td>
+													<td>柜面渠道</td>
+													<td class="serNum">7001</td>
+													<td class="serName">参数同步</td>
+													<td><a href="#">开启</a></td>
+													<td><a href="#" data-toggle="tab" >修改</a><a href="#delete" data-toggle="modal" >删除</a></td>
+											    </tr>
+											</tbody>
+										</table>
+										<ul class="pagination">
+											<li><a href="#">&laquo;上一页</a></li>
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li class="disabled"><a href="#">&raquo;下一页</a></li>
+											<li>
+												<div class="page-num">
+											       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+										        </div>
+											</li>
+										</ul>
+								
+									</div>
+								</div>
+							</div>	
+						  </div>
+						
+					   </div>
+					</div>
+						
+					<!--列表删除弹出框-->
+				   <div class="modal fade" id="delete" data-backdrop="false">
+									<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											系统提示
+										</div>
+										<div class="modal-body">
+											确认要删除？
+										</div>
+									    <div class="modal-footer">
+									    	<button class="btn btn-default" data-dismiss="modal">取消</button>
+									    	<button class="btn btn-default" data-dismiss="modal">确认</button>
+									    </div>
+									</div>
+								    </div>
+					</div>
+					
+					<!--服务添加删除提示弹出框-->
+				   <div class="modal fade" id="service" data-backdrop="static">
+									<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											系统提示
+										</div>
+										<div class="modal-body">
+											<div class="img"></div><span>确认要删除？</span>
+										</div>
+									    <div class="modal-footer">
+									    	<button class="btn btn-default" data-dismiss="modal">取消</button>
+									    	<button class="btn btn-default ok"  data-dismiss="modal">确认</button>
+									    </div>
+									</div>
+								    </div>
+					</div>
+		           
+		</div>						
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/change.js" ></script>
+	<script type="text/javascript" src="../js/move.js" ></script>
+</html>

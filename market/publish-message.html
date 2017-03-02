@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/common.css">
+		<title></title>
+	</head>
+	<body>
+		<div class="tab-content " id="right-MyTabContent" >
+				   <!--页面首页右侧发行机构切换-->
+					<div class="tab-pane fade active in clearfix " id="publish-message">
+					    <div class="organization-left col-sm-3">
+							<p>发行机构框架<span class="glyphicon glyphicon-refresh"></span></p>
+						</div>
+						<div class="organization-right col-sm-9">
+							<ul class="nav nav-tabs">
+								<li class="active in"><a href="#role-list" data-toggle="tab">基本信息添加</a></li>
+							</ul>
+							<form role="form" class="form-horizontal add-list">
+								    <div class="form-group">
+									 	<label class="control-label col-sm-2">上级机构：</label>
+									 	<div class="col-sm-4 top-ogan">
+											顶级机构
+										</div>
+										<label class="control-label col-sm-2">发行机构代号<span class="point-color">*</span>：</label>
+									 	<div class="col-sm-4 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+									 </div>
+									<div class="form-group">
+									 	<label class="control-label col-sm-2">发行机构名称：</label>
+									 	<div class="col-sm-4 padding-div">
+											<input type="text" class="form-control"/>
+										</div>
+										<label class="control-label col-sm-2">发行机构全称：</label>
+									 	<div class="col-sm-4 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+									 </div> 
+									 <div class="form-group">
+									 	<label class="control-label col-sm-2">发行机构类型<span class="point-color">*</span>：</label>
+									 	<div class="col-sm-4 padding-div">
+											<select class="form-control inputOption">
+									      	 <option>————请选择————</option>
+									      	 <option>实体</option>
+									      	 <option>映射</option>
+									       </select>
+										</div>
+										<label class="control-label col-sm-2">发行管理机构：</label>
+									 	<div class="col-sm-4 padding-div">
+											<div class="input-group">
+												<input type="text" class="form-control" aria-describedby="basic-addon1">
+												<span class="input-group-addon searchAdd-p" id="basic-addon1"><span class="glyphicon glyphicon-search"></span></span>
+											</div>
+										</div>
+									 </div>  
+									 <div class="form-group">
+									 	<label class="control-label col-sm-2">评估等基级：</label>
+									 	<div class="col-sm-4 padding-div">
+											<input type="text" class="form-control"/>
+										</div>
+										<label class="control-label col-sm-2">组织机构代码：</label>
+									 	<div class="col-sm-4 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+									 </div>
+									 <div class="form-group">
+									 	<label class="control-label col-sm-2">证件类型：</label>
+									 	<div class="col-sm-4 padding-div">
+											<input type="text" class="form-control"/>
+										</div>
+										<label class="control-label col-sm-2">证件号码：</label>
+									 	<div class="col-sm-4 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+									 </div>  
+									 <div class="form-group">
+									 	<label class="control-label col-sm-2">公司邮箱：</label>
+									 	<div class="col-sm-4 padding-div">
+											<input type="text" class="form-control"/>
+										</div>
+										<label class="control-label col-sm-2">公司地址：</label>
+									 	<div class="col-sm-4 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+									 </div>
+									 <div class="form-group">
+									 	<label class="control-label col-sm-2">所属省：</label>
+									 	<div class="col-sm-4 padding-div">
+											<input type="text" class="form-control"/>
+										</div>
+										<label class="control-label col-sm-2">所属市：</label>
+									 	<div class="col-sm-4 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+									 </div>
+									 <div class="form-group">
+									 	<label class="control-label col-sm-2">法人姓名：</label>
+									 	<div class="col-sm-4 padding-div">
+											<input type="text" class="form-control"/>
+										</div> 
+									 </div> 
+									 <div class="form-group">
+									      <div class="col-sm-12 text-red ">先保存，再添加账户信息</div>
+									 </div>
+									 <div class="add-footer row">
+									 	<div class="col-sm-4 col-sm-offset-5">
+										 	<button type="submit" class="btn btn-info">保&nbsp;存</button>
+										 	<button type="button" class="btn btn-default">返&nbsp;回</button>
+										</div>
+									 </div>
+								</form>
+						</div>
+					
+					</div>
+					
+				   <!--列表删除弹出框-->
+				   <div class="modal fade" id="delete" data-backdrop="false">
+									<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											系统提示
+										</div>
+										<div class="modal-body">
+											确认要删除？
+										</div>
+									    <div class="modal-footer">
+									    	<button class="btn btn-default" data-dismiss="modal">取消</button>
+									    	<button class="btn btn-default" data-dismiss="modal">确认</button>
+									    </div>
+									</div>
+								    </div>
+					</div>	
+		</div>						
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/change.js" ></script>
+</html>

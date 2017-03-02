@@ -1,0 +1,40 @@
+/*系统设置-菜单管理*/	   
+.menu-function-footer{height:66px;background:#F5F5F5;padding:20px 0 0 180px ;margin-top:30px;}
+.tab-content .table-striped .second-level td:first-child{padding-left:20px}
+.tab-content .table-striped .third td:first-child{padding-left:38px}
+.tab-content .table-striped .forth-menu td:first-child,.tab-content .table-striped .forth-user td:first-child{padding-left:55px}
+.point-out{padding-top:8px;padding-left:0px;} 
+.tab-content #menu-list .table-striped tbody tr{display: none;}
+.tab-content #menu-list .table-striped .first-level{display: table-row;}
+#menu-function-list .table-striped input{width:70px;border-radius: 5px;height: 18px;border:1px solid #CCCCCC;}
+.menu-function-head{background:#F5F5F5;height:40px;margin:10px 0;font-size:13px;padding-left:20px;line-height: 40px;color: #666666;}
+.menu-function-head span{font-weight: 700;margin-right:200px;}
+.menu-function-footer{padding-left: 20px;}
+#menu-add .form-group .checkbox-inline input{vertical-align: middle;}
+#menu-add .link .form-control{width:500px;} 
+.radio-align{vertical-align: middle;}
+.header p{margin-bottom: 0px;padding:5px 0;}
+/* 系统设置-角色管理*/
+
+ #role-devide span{font-size:13px;width:40%;padding-bottom:10px;margin-right: 200px;}
+
+ 
+/*系统设置-字典管理*/
+.log-head{background:#F5F5F5;border-radius:4px;padding:10px 20px;margin-bottom:6px;margin-top:10px;}
+#dictionary-list .dictionary-list-head div{display:inline-block;padding-left:15px;}
+
+
+/*系统设置-用户管理*/          
+.display-type{display:inline-block;}
+#user-add .form-group p{color:#CCCCCC;}
+#user-add  .checkbox-inline span{position:relative;top:-12px;color:#000000;}
+#user-add .form-check{vertical-align:middle;margin-left:10px;}
+.tab-content .tab-pane a:hover{text-decoration:none;}           
+#delete .modal-dialog{width:350px;}
+.searchAdd{cursor:pointer;width:auto;}
+.searchAdd-p{cursor:pointer;}
+.display-type{display:inline-block;}
+.user-label{margin-right:10px;}
+.user-label input{vertical-align: middle;margin-top:0px;}
+.user-role label{margin-right:10px;}
+.user-role label input{vertical-align: middle;margin-top:0px;}

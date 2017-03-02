@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/system.css" />
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../css/bootstrap-select.min.css" />
+		
+		
+		
+	</head>
+	<body>
+		<div class="tab-content  " id="right-MyTabContent">
+			<!--页面首页右侧切换字典管理-->
+			<div class="tab-pane fade active in row" id="dictionary-manage">
+							<ul class="nav nav-tabs">
+								<li class="active in"><a href="#dictionary-list" data-toggle="tab">字典列表</a></li>
+								<li ><a href="#dictionary-add" data-toggle="tab">字典添加</a></li>
+							</ul>
+							<div class="tab-content">
+								<!--字典管理列表tab页-->
+								<div class="tab-pane fade active in" id="dictionary-list">																													
+											<div class="header">
+												<form class="form-inline">												
+													<div class="form-group">
+						                    		    <label>类型:</label>				                    		
+						                    			<select class="form-control inputOption selectpicker col-" data-live-search="true" >					                    				
+						                    				<option>字典一</option>
+						                    				<option>字典二</option>
+						                    				<option>字典三</option>					                    				
+						                    			</select>				                    							                    		
+						                    	    </div>
+							                    	<div class="form-group">
+							                    		<label>描述:</label>				                    		
+							                    		<input type="text" class="form-control" placeholder="hello">			                    		
+							                    	</div>
+							                    	<div class="form-group">
+								                    	<button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span>查询</button>
+								                    	<button class="btn btn-success"><span class="glyphicon glyphicon-refresh"></span>重置</button>
+								                    	<button class="btn btn-warning"><span class="glyphicon glyphicon-trash"></span>删除</button>	
+							                    	</div>
+												</form>
+											</div>
+										 
+									<div class="table-responsive">
+										<table class="table table-striped table-bordered tableTh">
+											<thead>
+												<tr>
+													<th class="col-sm-1 col-md-1"><label for="dic-checkbox" class="checkbox-inline"><input type="checkbox" id="dic-checkbox"/>全选</label></th>
+													<th>链接</th>
+													<th>报文类型</th>
+													<th>类型</th>
+													<th>描述</th>
+													<th>操作</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input  type="checkbox"/></td>
+													<td>1</td>
+													<td>定长报文</td>
+													<td>1</td>
+													<td>1</td>
+													<td><a href="#dictionary-add" data-toggle="tab" >修改</a><a href="#delete" data-toggle="modal" >删除</a><a href="#dictionary-add" data-toggle="tab" >添加</a></td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" ></td><td>字典abc</td><td>字典abc</td><td>字典abc</td><td>字典abc</td><td>字典abc</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<ul class="pagination">
+										<li><a href="#">&laquo;上一页</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li class="disabled"><a href="#">&raquo;下一页</a></li>
+										<li>
+											<div class="page-num">
+										       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+									        </div>
+										</li>
+									</ul>
+								</div>
+								<!--字典管理添加tab页-->
+								<div class="tab-pane fade  " id="dictionary-add">
+									<form class="form-horizontal form-padding form-font">
+										<div class="form-group">
+											<label class="control-label col-sm-2 col-md-2">键值:</label>
+											<div class="col-sm-2 col-md-2">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2 col-md-2">标签:</label>
+											<div class="col-sm-2 col-md-2" style="position:relative;">
+												<input type="text" class="form-control">
+												<div class="error clearfix" style="width:100px;position:absolute; display:none;">sdfh水电费等方式的</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2 col-md-2">类型:</label>
+											<div class="col-sm-2 col-md-2">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2 col-md-2">描述:</label>
+											<div class="col-sm-3 col-md-3">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2 col-md-2">备注:</label>
+											<div class="col-sm-5 col-md-5">
+												<textarea class="form-control"></textarea>
+											</div>
+										</div>
+										<div class="form-group">
+											    <div class="col-sm-offset-2 col-sm-5">
+											        <button type="submit" class="btn btn-primary">保存</button>
+											        <button type="submit" class="btn btn-default">返回</button>
+											    </div>
+										    </div>
+										
+									</form>
+									
+								</div>
+							</div>
+			   </div>
+		
+		</div>		
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/system.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap-select.js" ></script>
+	<script>
+	  $(document).ready(function(){
+	  	   
+	    $("input,textarea,select").click(function(){
+	    
+	    	            if($(this).parent().find(".error1").html()){
+	    	            		$(this).parent().find(".error1").css("display","block");
+	    	                            	
+	    	             }else{
+	    	                    $(this).after($('<div class="error1" >Tooltip on left<div class="triangle"></div></div>')); 
+	    	                    $(this).parent().find(".error1").css("width",$(this).parent().find(".error1").outerWidth()+1);
+	    	                   
+								$(this).parent().find(".error1").css({"display":"block","position":"absolute","left":"50%"});
+								$(this).parent().find(".error1").parent().css("position","relative"); 
+								$(this).parent().find(".error1").css("top",-$(this).parent().find(".error1").outerHeight()-10);
+								
+							}
+	    	            $(this).blur(function(){
+	    	            	$(this).parent().find(".error1").css("display","none")
+	    	            })
+	    	             
+	      				})
+		 
+	  	})
+	   
+	
+	</script>
+
+</html>

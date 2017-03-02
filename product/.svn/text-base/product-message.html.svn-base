@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/product.css" />
+		<link rel="stylesheet" href="../css/common.css">
+		<title>产品信息</title>
+	</head>
+	<body>
+		<div class="tab-content " id="right-MyTabContent" >
+			<!--页面首页右侧产品信息-->
+					<div class="tab-pane fade active in " id="product-message">
+							<ul class="nav nav-tabs">
+								<li class="active in"><a href="#product-divide" data-toggle="tab">产品分类</a></li>
+								<li style="display:none;"><a href="#product-list" data-toggle="tab">产品列表</a></li>
+								<li style="display:none;"><a href="#big-stroage-list" data-toggle="tab">大额存单列表</a></li>
+								<li style="display:none;"><a href="#product-account-list" data-toggle="tab">产品账户信息列表</a></li>
+								<li style="display:none;"><a href="#product-account-add" data-toggle="tab">产品账户信息添加</a></li>
+								<li style="display:none;"><a href="#product-doc-list" data-toggle="tab">产品文档列表</a></li>
+								<li style="display:none;"><a href="#product-doc-add" data-toggle="tab">产品文档添加</a></li>
+							</ul>
+							<div class="tab-content">
+								<!--产品分类-->
+								<div class="tab-pane fade active in" id="product-divide">
+									<div class="container">
+										<div class="row">
+											<div class="col-sm-2 col-xs-8 ">
+												<p>大额存单</p>
+												<div ></div>
+												<a href="#product-list" data-toggle="tab"><span class="glyphicon glyphicon-list-alt" title="大额存单列表" ></span></a>
+												<a href="#big-stroage-list" data-toggle="tab"><span class="glyphicon glyphicon-plus"  title="大额存单添加"></span></a>
+											</div>
+											<div class="col-sm-2 col-xs-8 ">
+												<p>商业银行理财产品</p>
+												<div ></div>
+												<a href="#product-list" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"  title="商业银行理财产品列表"></span></a>
+												<span class="glyphicon glyphicon-plus"  title="商业银行理财产品添加"></span>
+											</div>
+											<div class="col-sm-2 col-xs-8">
+												<p>地方金交所产品</p>
+												<div ></div>
+												<a href="#product-list" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"  title="地方金交所产品列表"></span></a>
+												<span class="glyphicon glyphicon-plus"  title="地方金交所产品添加"></span>
+											</div>
+											<div class="col-sm-2 col-xs-8">
+												<p>类固定收益证券产品</p>
+												<div ></div>
+												<a href="#product-list" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"  title="类固定收益证券产品列表"></span></span></a>
+												<span class="glyphicon glyphicon-plus"  title="类固定收益证券产品添加"></span>
+											</div>
+											<div class="col-sm-2 col-xs-8">
+												<p>类固定收益证券产品</p>
+												<div ></div>
+												<a href="#product-list" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"  title="类固定收益证券产品列表"></span></span></a>
+												<span class="glyphicon glyphicon-plus"  title="类固定收益证券产品添加"></span>
+											</div>
+										</div>
+										<div class="row">
+												<div class="col-sm-2 col-xs-8">
+													<p>大额存单</p>
+													<div ></div>
+													<a href="#product-list" data-toggle="tab"><span class="glyphicon glyphicon-list-alt" title="大额存单列表" ></span></a>
+													<span class="glyphicon glyphicon-plus"  title="大额存单添加"></span>
+												</div>
+												<div class="col-sm-2 col-xs-8 ">
+													<p>商业银行理财产品</p>
+													<div ></div>
+													<a href="#product-list" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"  title="商业银行理财产品列表"></span></a>
+													<span class="glyphicon glyphicon-plus"  title="商业银行理财产品添加"></span>
+												</div>
+												<div class="col-sm-2 col-xs-8">
+													<p>地方金交所产品</p>
+													<div ></div>
+													<a href="#product-list" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"  title="地方金交所产品列表"></span></a>
+													<span class="glyphicon glyphicon-plus"  title="地方金交所产品添加"></span>
+												</div>
+												<div class="col-sm-2 col-xs-8">
+													<p>类固定收益证券产品</p>
+													<div ></div>
+													<a href="#product-list" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"  title="类固定收益证券产品列表"></span></span></a>
+													<span class="glyphicon glyphicon-plus"  title="类固定收益证券产品添加"></span>
+												</div>
+												<div class="col-sm-2 col-xs-8">
+													<p>类固定收益证券产品</p>
+													<div ></div>
+													<a href="#product-list" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"  title="类固定收益证券产品列表"></span></span></a>
+													<span class="glyphicon glyphicon-plus"  title="类固定收益证券产品添加"></span>
+												</div>
+										</div>
+									</div>
+								</div>
+						        <!--产品列表-->
+							    <div class="tab-pane fade " id="product-list">
+									<div class="header">
+										<form class="form-inline">
+											<div class="form-group">
+												<label>产品代码：</label><input type="text" class="form-control" /> 
+											</div>
+											<div class="form-group">
+												<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+												<button class="btn btn-info "><span class="glyphicon glyphicon-refresh"></span>&nbsp;重置</button>
+												<button class="btn btn-danger "><span class="glyphicon glyphicon-trash"></span>&nbsp;删除</button>
+												<button class="btn btn-success "><span class="glyphicon glyphicon-repeat"></span>&nbsp;刷新缓存</button>
+										    </div>
+										</form>
+									</div>
+									<div class="table-responsive">
+										<table class="table table-striped table-bordered">
+											<thead>
+												<tr>
+													<th><input type="checkbox"/>全选</th>
+													<th>产品代码</th>
+													<th>产品名称</th>
+													<th>产品品种</th>
+													<th>产品级别</th>
+													<th>产品类型</th>
+													<th>产品状态</th>
+													<th>促销标志</th>
+													<th>销售对象</th>
+													<th>操作</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="checkbox"/></td>
+													<td>0001</td>
+													<td>7005</td>
+													<td>大额存单</td>
+													<td>总部</td>
+													<td>系统产品</td>
+													<td>发行成功</td>
+													<td>非促销</td>
+													<td>全部</td>
+													<td>
+														<a href="#big-stroage-list" data-toggle="tab" >修改</a>
+														<a href="#delete" data-toggle="modal" >删除</a>
+														<a href="#" data-toggle="modal" >其他参数</a>
+														<a href="#product-account-list" data-toggle="tab" >账户信息</a>
+														<a href="#product-doc-list" data-toggle="tab" >文档登记</a>
+														<a href="#" data-toggle="" >刷新缓存</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<ul class="pagination">
+											<li><a href="#">&laquo;上一页</a></li>
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li class="disabled"><a href="#">&raquo;下一页</a></li>
+											<li>
+												<div class="page-num">
+											       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+										        </div>
+											</li>
+										</ul>
+									
+									</div>
+								</div>
+							    <!--大额存单列表-->
+							    <div class="tab-pane fade" id="big-stroage-list">
+							    	<form role="form" class="form-horizontal add-list">
+							    		<div class="form-group">
+											<label class="col-sm-2  control-label">产品品种<span class="point-color">*</span>:</label>
+											<div class="col-sm-2 ">
+												<input type="text" class="form-control">
+											</div>
+											<label class="col-sm-2  control-label">产品代码<span class="point-color">*</span>:</label>
+											<div class="col-sm-2 ">
+												<input type="text" class="form-control">
+											</div>
+											<label class="col-sm-2  control-label">产品名称<span class="point-color">*</span>:</label>
+											<div class="col-sm-2 ">
+												<input type="text" class="form-control">
+											</div> 
+										</div> 
+										<div class="form-group">
+											<label class="col-sm-2  control-label">产品类型:</label>
+											<div class="col-sm-2 ">
+												<select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>点击成交</option>
+										       	       <option>做市交易</option>
+										         </select>
+											</div>
+											<label class="col-sm-2  control-label">产品级别:</label>
+											<div class="col-sm-2 ">
+												<select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>总部</option>
+										       	       <option>分部</option>
+										         </select>
+											</div>
+											<label class="col-sm-2  control-label">产品属性:</label>
+											<div class="col-sm-2 ">
+												<select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>自营</option>
+										       	       <option>做市交易</option>
+										        </select>
+											</div> 
+										</div>  
+										<div class="form-group">
+											<label class="col-sm-2  control-label">促销标志<span class="point-color">*</span>:</label>
+											<div class="col-sm-2 ">
+												<select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>非促销</option>
+										       	       <option>做市交易</option>
+										        </select>
+											</div>
+											<label class="col-sm-2  control-label">产品状态<span class="point-color">*</span>:</label>
+											<div class="col-sm-2 ">
+												<select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>总部</option>
+										       	       <option>分部</option>
+										        </select>
+											</div>
+											<label class="col-sm-2  control-label">销售对象<span class="point-color">*</span>:</label>
+											<div class="col-sm-2 ">
+												<select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>自营</option>
+										       	       <option>做市交易</option>
+										        </select>
+											</div> 
+										</div>  
+										 <ul class="nav nav-tabs" style="margin-top:10px;">
+										 	<li class="active in"><a href="#product-basic-message" data-toggle="tab">基本信息</a></li>
+										 	<li><a href="#power-control" data-toggle="tab">权限控制</a></li>
+										 	<li><a href="#big-stroage-message" data-toggle="tab">大额存单信息</a></li>
+										 </ul>
+										 <div class="tab-content">
+										 	<div class="tab-pane fade active in" id="product-basic-message">
+										 		<div class="form-group">
+													<label class="col-sm-2  control-label">外部产品代码:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control">
+													</div>
+													<label class="col-sm-2  control-label">外部TA代码:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control">
+													</div>
+													<label class="col-sm-2  control-label">产品全称:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control">
+													</div> 
+												</div> 
+												<div class="form-group">
+													<label class="col-sm-2  control-label">管理机构:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control">
+													</div>
+													<label class="col-sm-2  control-label">客户经理:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control">
+													</div>
+													<label class="col-sm-2  control-label">发行机构:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control">
+													</div> 
+												</div>
+												<div class="form-group">
+													<label class="col-sm-2  control-label">发行起始日期:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control">
+													</div>
+													<label class="col-sm-2  control-label">发行起始时间:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control">
+													</div>
+													<label class="col-sm-2  control-label">发行结束日期:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control">
+													</div> 
+												</div> 
+												<div class="form-group">
+													<label class="col-sm-2  control-label">发行结束时间:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control">
+													</div>
+													<label class="col-sm-2  control-label">发行期限:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>———请选择———</option>
+											       	       <option>一个月</option>
+											       	       <option>一年</option>
+											       	       <option>一个月</option>
+											            </select>
+													</div>
+													<label class="col-sm-2  control-label">发行额度:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control">
+													</div> 
+												</div>  
+												<div class="form-group">
+													<label class="col-sm-2  control-label">购买起点面额:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control">
+													</div>
+													<label class="col-sm-2  control-label">递增面额:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control">
+													</div>
+													<label class="col-sm-2  control-label">货币种类:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>人民币</option>
+											       	       <option>美元</option>
+											       	       <option>港元</option>
+											            </select>
+													</div> 
+												</div> 
+												<div class="form-group">
+													<label class="col-sm-2  control-label">允许转让:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>可转让</option>
+											       	       <option>不可转让</option>
+											            </select>
+													</div>
+													<label class="col-sm-2  control-label">允许撒单:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>不允许撒单</option>
+											       	       <option>允许撒单</option>
+											            </select>
+													</div> 
+												</div>  
+										    </div>
+										 	<div class="tab-pane fade" id="power-control"> 
+										 		<div class="form-group">
+													<label class="col-sm-2  control-label">购买控制标志<span class="point-color">*</span>:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>———请选择———</option>
+											       	       <option>产品控制</option>
+											       	       <option >机构</option>
+											            </select>
+													</div>
+													<label class="col-sm-2  control-label">机构控制<span class="point-color">*</span>:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>———请选择———</option>
+											       	       <option>产品控制</option>
+											       	       <option >机构</option>
+											            </select>
+													</div>
+													<label class="col-sm-2  control-label">转让控制<span class="point-color">*</span>:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>———请选择———</option>
+											       	       <option>产品控制</option>
+											       	       <option >机构</option>
+											            </select>
+													</div> 
+												</div> 
+												<div class="form-group">
+													<label class="col-sm-2  control-label">工作日控制<span class="point-color">*</span>:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>———请选择———</option>
+											       	       <option>产品控制</option>
+											       	       <option >机构</option>
+											            </select>
+													</div>
+													<label class="col-sm-2  control-label">限额控制<span class="point-color">*</span>:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>———请选择———</option>
+											       	       <option>产品控制</option>
+											       	       <option >机构</option>
+											            </select>
+													</div>
+													<label class="col-sm-2  control-label">额度控制<span class="point-color">*</span>:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>———请选择———</option>
+											       	       <option>产品控制</option>
+											       	       <option >机构</option>
+											            </select>
+													</div> 
+												</div> 
+												
+												<div class="form-group">
+													<label class="col-sm-2  control-label">资产渠道控制标志<span class="point-color">*</span>:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>———请选择———</option>
+											       	       <option>产品控制</option>
+											       	       <option >机构</option>
+											            </select>
+													</div> 
+												</div>  
+										 	</div>
+										    <div class="tab-pane fade" id="big-stroage-message"> 
+										    	<div class="form-group">
+													<label class="col-sm-2  control-label">资产编号:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control"/>
+													</div>
+													<label class="col-sm-2  control-label">客户类型:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>———请选择———</option>
+											       	       <option>企金</option>
+											       	       <option >机构</option>
+											            </select>
+													</div>
+													<label class="col-sm-2  control-label">财务模式:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>———请选择———</option>
+											       	       <option>企金</option>
+											       	       <option >机构</option>
+											            </select>
+													</div>
+												</div> 
+												<div class="form-group"> 
+													<label class="col-sm-2  control-label">利率类型:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>———请选择———</option>
+											       	       <option>企金</option>
+											       	       <option >机构</option>
+											            </select>
+													</div>
+													<label class="col-sm-2  control-label">利率:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control"/>
+													</div>
+													<label class="col-sm-2  control-label">利率代号:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control"/>
+													</div>
+												</div> 
+												<div class="form-group"> 
+													<label class="col-sm-2  control-label">浮动基准利率:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control"/>
+													</div>
+													<label class="col-sm-2  control-label">利率点数浮动值:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control"/>
+													</div>
+													<label class="col-sm-2  control-label">利率比例浮动值:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control"/>
+													</div>
+												</div> 
+												<div class="form-group"> 
+													<label class="col-sm-2  control-label">重定价周期:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control"/>
+													</div>
+													<label class="col-sm-2  control-label">业务期限:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control"/>
+													</div>
+													<label class="col-sm-2  control-label">日利率换算天数:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control"/>
+													</div>
+												</div> 
+												<div class="form-group"> 
+													<label class="col-sm-2  control-label">计息标志：</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>———请选择———</option>
+											       	    </select>
+													</div>
+													<label class="col-sm-2  control-label">结息周期:</label>
+													<div class="col-sm-2 ">
+														<select class="form-control">
+											       	       <option>———请选择———</option>
+											       	    </select>
+													</div>
+													<label class="col-sm-2  control-label">执行利率:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control"/>
+													</div>
+												</div> 
+												<div class="form-group"> 
+													<label class="col-sm-2  control-label">起息日:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control"/>
+													</div>
+													<label class="col-sm-2  control-label">到期日:</label>
+													<div class="col-sm-2 ">
+														<input type="text" class="form-control"/>
+													</div> 
+												</div> 
+										 	</div>
+										    
+										 </div>
+										 <div class="add-footer row">
+										 	<div class="col-sm-5 col-sm-offset-5">
+											 	<button type="submit" class="btn btn-info">保&nbsp;存</button> 
+											 	<button type="button" class="btn btn-default">返&nbsp;回</button>
+											</div>
+										 </div> 
+									</form>
+							    </div>
+							    <!--产品账户信息列表-->
+							    <div class="tab-pane fade" id="product-account-list">
+							    	<div class="header">
+										<form class="form-inline">
+											<div class="form-group">
+												<label>账户类型：</label><select class="form-control">
+																		 	<option>————请选择————</option>
+																		 </select>
+												<label>账户：</label><input type="text" class="form-control" />
+												<label>账号户名：</label><input type="text" class="form-control" />
+											</div> 
+											<div class="form-group">
+												<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+												<button class="btn btn-info "><span class="glyphicon glyphicon-refresh"></span>&nbsp;重置</button>
+												<button class="btn btn-danger "><span class="glyphicon glyphicon-trash"></span>&nbsp;删除</button>
+										    </div>
+										</form>
+									</div>
+									<div class="table-responsive">
+										<table class="table table-striped table-bordered">
+											<thead>
+												<tr>
+													<th><input type="checkbox"/>全选</th>
+													<th>产品名称</th>
+													<th>账户类型</th>
+													<th>账号科目</th>
+													<th>账号</th>
+													<th>账号户名</th>
+													<th>操作</th>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="checkbox"/></td>
+													<td>0001</td>
+													<td>本金归集过度账户</td>
+													<td>大额存单</td>
+													<td>非促销</td>
+													<td>全部</td>
+													<td>
+														<a href="#product-account-add" data-toggle="tab" >修改</a>
+														<a href="#delete" data-toggle="modal" >删除</a>
+														<a href="#" data-toggle="modal" >账户验证</a>
+													</td>
+											</tbody>
+										</table>
+										<ul class="pagination">
+											<li><a href="#">&laquo;上一页</a></li>
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li class="disabled"><a href="#">&raquo;下一页</a></li>
+											<li>
+												<div class="page-num">
+											       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+										        </div>
+											</li>
+										</ul>
+									
+									</div>
+							    </div>
+							    <!--产品账户信息添加-->
+							    <div class="tab-pane fade" id="product-account-add">
+							    	<form role="form" class="form-horizontal add-list">
+							    		<div class="form-group">
+											<label class="col-sm-2  control-label">产品名称<span class="point-color">*</span>:</label>
+											<div class="col-sm-3 ">
+												<input type="text" class="form-control">
+											</div> 
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2  control-label">账户类型<span class="point-color">*</span>:</label>
+											<div class="col-sm-3 ">
+												<input type="text" class="form-control">
+											</div> 
+										</div> 
+										<div class="form-group">
+											<label class="col-sm-2  control-label">资金渠道 :</label>
+											<div class="col-sm-3 ">
+												<select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>核心转发</option>
+										       	       <option>做市交易</option>
+										        </select>
+											</div> 
+										</div> 
+										<div class="form-group">
+											<label class="col-sm-2  control-label">账户科目<span class="point-color">*</span> :</label>
+											<div class="col-sm-3 ">
+												<input type="text" class="form-control"/>
+											</div> 
+										</div> 
+										<div class="form-group">
+											<label class="col-sm-2  control-label">账号<span class="point-color">*</span> :</label>
+											<div class="col-sm-3 ">
+												<input type="text" class="form-control"/>
+											</div> 
+										</div> 
+										<div class="form-group">
+											<label class="col-sm-2  control-label">账号户名<span class="point-color">*</span> :</label>
+											<div class="col-sm-3 ">
+												<input type="text" class="form-control"/>
+											</div> 
+										</div> 
+										<div class="form-group span-foot ">
+												 	<div class="col-sm-2 col-sm-offset-1">维护机构：00000</div>
+												 	<div class="col-sm-2">维护柜员：00000</div>
+												 	<div class="col-sm-4">维护时间：2016-08-15 08:46:28</div>
+										 </div>
+										 <div class="add-footer row">
+										 	<div class="col-sm-4 col-sm-offset-2 col-xs-offset-3">
+											 	<button type="submit" class="btn btn-info">保&nbsp;存</button>
+											 	<button type="button" class="btn btn-default">返&nbsp;回</button>
+											</div>
+										 </div>
+									</form>
+							    </div>
+							    <!--产品文档列表-->
+							    <div class="tab-pane fade" id="product-doc-list">
+							    	<div class="header">
+										<form class="form-inline">
+											<div class="form-group">
+												<label>文档类型：</label><select class="form-control">
+																		 	        <option>————请选择————</option>
+																		 </select>
+											</div> 
+											<div class="form-group">
+												<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+												<button class="btn btn-info "><span class="glyphicon glyphicon-refresh"></span>&nbsp;重置</button>
+												<button class="btn btn-danger "><span class="glyphicon glyphicon-trash"></span>&nbsp;删除</button>
+										    </div>
+										</form>
+									</div>
+									<div class="form-group">
+										<table class="table table-striped table-bordered">
+											<thead>
+												<tr>
+													<th><input type="checkbox"/>全选</th>
+													<th>产品名称</th>
+													<th>文档类型</th>
+													<th>文档名称</th>
+													<th>操作</th>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="checkbox"/></td>
+													<td>0001</td>
+													<td>本金归集过度账户</td>
+													<td>文档下载文件名比较长时的测试文档文档文档文档文档文档.docx</td>
+													<td>
+														<a href="#product-doc-add" data-toggle="tab" >修改</a>
+														<a href="#delete" data-toggle="modal" >删除</a>
+														<a href="#" data-toggle="modal" >文档下载</a>
+													</td>
+											</tbody>
+										</table>
+										<ul class="pagination">
+											<li><a href="#">&laquo;上一页</a></li>
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li class="disabled"><a href="#">&raquo;下一页</a></li>
+											<li>
+												<div class="page-num">
+											       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+										        </div>
+											</li>
+										</ul>
+									
+									</div>
+							    </div>
+							    <!--产品文档信息添加-->
+							    <div class="tab-pane fade" id="product-doc-add">
+							    	<form role="form" class="form-horizontal add-list">
+							    		<div class="form-group">
+											<label class="col-sm-2  control-label">产品名称<span class="point-color">*</span> :</label>
+											<div class="col-sm-3 ">
+												<input type="text" class="form-control"/>
+											</div> 
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2  control-label">文档类型<span class="point-color">*</span> :</label>
+											<div class="col-sm-3 ">
+												<select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>核心转发</option>
+										       	       <option>做市交易</option>
+										        </select>
+											</div> 
+										</div> 
+										<div class="form-group">
+											<label class="col-sm-2  control-label">文档说明<span class="point-color">*</span> :</label>
+											<div class="col-sm-3 ">
+												<input type="text" class="form-control"/>
+											</div> 
+										</div> 
+										<div class="form-group span-foot ">
+												 	<div class="col-sm-2 col-sm-offset-1">维护机构：00000</div>
+												 	<div class="col-sm-2">维护柜员：00000</div>
+												 	<div class="col-sm-4">维护时间：2016-08-15 08:46:28</div>
+										 </div>
+										 <div class="add-footer row">
+										 	<div class="col-sm-4 col-sm-offset-2 col-xs-offset-3">
+											 	<button type="submit" class="btn btn-info">保&nbsp;存</button>
+											 	<button type="button" class="btn btn-default">返&nbsp;回</button>
+											</div>
+										 </div>
+									</form>
+							    </div>
+							
+							</div>
+					</div>
+					
+	    </div>						
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/product.js" ></script>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link href="../css/common.css" rel="stylesheet">
+		<title></title>
+	</head>
+	<body>
+		<div class="tab-content " id="right-MyTabContent" > 
+	                <!--差错交易等级-->
+					<div class="tab-pane fade active in " id="wrong-trade">
+					    <ul class="nav nav-tabs">
+							<li class="active in"><a href="#wrong-trade-list" data-toggle="tab">差错交易登记列表</a></li>
+							<li ><a href="#wrong-trade-add" data-toggle="tab">差错交易详情</a></li>
+						</ul>
+						<div class="tab-content">
+							<!--差错交易等级列表-->
+						     <div class="tab-pane fade active in" id="wrong-trade-list">
+								<div class="header">
+									<form class="form-inline">
+										<div class="form-group">
+											<label>客户编号</label>
+											<input type="text" class="form-control" />
+										</div>
+										<div class="form-group">
+											<label>登记日期</label>
+											<input type="text" class="form-control input-data" />&nbsp;--&nbsp;<input type="text" class="form-control input-data" />
+										</div> 
+										<div class="form-group">
+											<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+											<button class="btn btn-info "><span class="glyphicon glyphicon-refresh"></span>&nbsp;重置</button>
+											<button class="btn btn-warning "><span class="glyphicon glyphicon-open-file"></span>&nbsp;导出</button>
+									    </div>
+									</form>
+								</div>
+							    <div class="table-responsive">
+							    	<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th><input type="checkbox"/>全选</th>
+												<th>差错编号</th>
+												<th>差错来源</th>
+												<th>差错类型</th>
+												<th>登记日期</th>
+												<th>登记时间</th>
+												<th>原交易代码</th>
+												<th>原受理日期</th>
+												<th>原受理编号</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input type="checkbox"/></td>
+												<td>1</td>
+												<td>大额卖单委托</td>
+												<td>20160822</td>
+												<td>兴业银行</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td><a href="#wrong-trade-add" data-toggle="tab" >查看</a></td>
+										    </tr>
+										</tbody>
+									</table>
+									<ul class="pagination">
+										<li><a href="#">&laquo;上一页</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li class="disabled"><a href="#">&raquo;下一页</a></li>
+										<li>
+											<div class="page-num">
+										       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+									        </div>
+										</li>
+									</ul>
+								
+							    </div>
+						    </div>
+							<!--买单委托添加-->
+							 <div class="tab-pane fade " id="wrong-trade-add">
+								<form role="form" class="form-horizontal add-list">
+									<div class="form-group">
+										<label class="control-label col-sm-2">差错编号：</label>
+										<div class="col-sm-2 padding-div">
+											<input type="text" class="form-control"/>
+										</div>
+										<label class="control-label col-sm-2">差错来源：</label>
+										<div class="col-sm-2 padding-div">
+											<select class="form-control">
+									       	       <option>———请选择———</option>
+									       	       <option>大额卖单委托</option>
+									       	       <option>大额买单委托</option>
+									        </select>
+										</div>
+										<label class="control-label col-sm-2">差错类型：</label>
+										<div class="col-sm-2 padding-div">
+											<select class="form-control">
+									       	       <option>———请选择———</option>
+									       	       <option>点击成交</option>
+									       	       <option>做市交易</option>
+									       	       <option>定向成交</option>
+									       	       <option>大额询价交易</option>
+									        </select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-2">产品代码：</label>
+										<div class="col-sm-2 padding-div">
+											<input type="text" class="form-control"/>
+										</div>
+										<label class="control-label col-sm-2">客户编号：</label>
+										<div class="col-sm-2 padding-div">
+											<input type="text" class="form-control"/>
+										</div>
+										<label class="control-label col-sm-2">客户名称：</label>
+										<div class="col-sm-2 padding-div">
+											<input type="text" class="form-control"/>
+										</div>
+									</div> 
+									<div class="form-group">
+										<label class="control-label col-sm-2">登记日期：</label>
+										<div class="col-sm-2 padding-div">
+											<input type="text" class="form-control"/>
+										</div>
+										<label class="control-label col-sm-2">登记时间：</label>
+										<div class="col-sm-2 padding-div">
+											<input type="text" class="form-control"/>
+										</div> 
+									</div>  
+									 <ul class="nav nav-tabs" style="margin-top:10px;">
+									 	<li class="active in"><a href="#risk-trade-message" data-toggle="tab">交易信息</a></li>
+									 	<li><a href="#client-property-message" data-toggle="tab">客户资产信息</a></li>
+									 	<li><a href="#adjust-message" data-toggle="tab">调整信息</a></li>
+									 </ul>
+									 <div class="tab-content">
+									 	<div class="tab-pane fade active in" id="risk-trade-message">
+									 		<div class="form-group">
+									 			<label class="control-label col-sm-2">原交易代码：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">原受理编号：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">原受理日期：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div> 
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">管理机构：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">代销机构代码：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">代销渠道代码：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>  
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">交易金额：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">交易份额：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">审核柜员：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div> 
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">审核柜员：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>  
+											</div>
+									    </div>
+									 	<div class="tab-pane fade" id="client-property-message"> 
+									 		<div class="form-group">
+									 			<label class="control-label col-sm-2">银行账号：</label>
+												<div class="col-sm-3 padding-div">
+													<input type="text" class="form-control"/>
+												</div> 
+												<label class="control-label col-sm-2">客户资金账号：</label>
+												<div class="col-sm-3 padding-div">
+													<input type="text" class="form-control"/>
+												</div>  
+											</div>
+											<div class="form-group"> 
+												<label class="control-label col-sm-2">资金状态：</label>
+												<div class="col-sm-3 padding-div">
+													<select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>个人</option>
+										       	       <option >机构</option>
+										            </select>
+												</div> 
+												<label class="control-label col-sm-2">资产状态：</label>
+												<div class="col-sm-3 padding-div">
+													<select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>其他</option>
+										       	       <option >身份证</option>
+										       	       <option>护照</option>
+										            </select>
+												</div> 
+											</div>
+									 	</div>
+									    <div class="tab-pane fade" id="adjust-message"> 
+											<div class="form-group">
+												<label class="control-label col-sm-2">调整状态：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">调整方式：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">调整机构：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>  
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">调整流水号：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">调整柜员：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">调整日期：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>  
+											</div>
+									 	</div>
+									    
+									 </div>
+									<div class="add-footer row">
+									 	<div class="col-sm-4 col-sm-offset-5"> 
+										 	<button type="button" class="btn btn-default">返&nbsp;回</button>
+										</div>
+									</div> 
+								</form>
+							 </div>
+						</div>
+					
+					</div>
+					    
+		           	
+		           <!--列表删除弹出框-->
+			        <div class="modal fade" id="delete" data-backdrop="false">
+									<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h4>系统提示</h4>
+										</div>
+										<div class="modal-body">
+											确认要删除？
+										</div>
+									    <div class="modal-footer">
+									    	<button class="btn btn-default" data-dismiss="modal">取消</button>
+									    	<button class="btn btn-default" data-dismiss="modal">确认</button>
+									    </div>
+									</div>
+								    </div>
+					</div>					
+ 	
+	    </div>						
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/change.js" ></script>	
+</html>
+

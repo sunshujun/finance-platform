@@ -1,0 +1,148 @@
+	  
+		   
+/*.font-color{color:#b6babd;cursor: pointer;font-size:12px;}
+.font-color:hover{color:#a1a3a5;}*/
+		   		  
+		   /*公共按钮样式*/
+		   /*#right-MyTabContent .btn-info:hover,#right-MyTabContent .btn-info:focus{background:#5BC0DE;}
+		    #right-MyTabContent .btn-primary:hover,#right-MyTabContent .btn-primary:focus{background:#337AB7;}
+		    #right-MyTabContent .btn-danger:hover,#right-MyTabContent  .btn-danger:focus{background:#D9534F;}
+		    #right-MyTabContent .btn-success:hover,#right-MyTabContent .btn-success:focus{background:#5CB85C;}
+		    #right-MyTabContent .btn-warning:hover,#right-MyTabContent .btn-warning:focus{background:#F0AD4E;}
+		    #right-MyTabContent .btn-group{margin-bottom:5px;}*/
+	          
+          
+          
+     
+       
+      
+		/*
+		.tableTh{color:#555;}*/
+		
+		/*.font-color{color: red;}*/
+           
+        /*    #log-search  .form-inline .form-group{display:inline-block;border:none;}*/
+        /*   .log-head .form-group label{font-weight: normal;font-size:13px;}*/
+           /*.log-head .input-width input{width:80%}
+           .log-head .input-user input{width:70%}*/
+          /* .log-head .data input{width:105px;background:##F5F5F5;}*/
+           /*.log-head .form-group{padding:0 0 5px 0}*/
+           /*.log-head .checkbox{margin:0 15px 0;font-size: 13px;}*/
+
+          /*市场管理market*/
+          .text-red{color:#FF0000;font-size:24px;font-weight:600;text-align:center;}
+		  .top-ogan{color:#3192C8;font-size:16px;font-weight: 800;line-height:35px;}
+          @media  (max-width:768px ) {
+          	  .text-red{font-size:16px;font-weight:400;}
+          }
+          
+           #sys-message .get-people{display:inline-block;width:69%}
+          
+
+         
+ 
+		    .modal .add-text1{display:inline-block;padding-right:15px;text-align: right;width:85px}
+		   /*接入节点控制*/
+		    #node-check .modal-body, #pass-check .modal-body{padding:8px 15px;}
+		    .modal .modal-body span{color:#FF0000}
+		    #node-check .modal-dialog{width:500px}
+		    #pass-check .modal-dialog{width:400px}
+		    #node-check .form-control{display:inline-block;width:300px}
+		    #pass-check .form-control{display:inline-block;width:250px}
+		    
+		    /*渠道管理 资金端服务接出配置modal */
+		    #fund-service .modal-body{font-size:13px;padding:8px 10px 15px 10px;}
+		    #fund-service .modal-body div{margin-bottom:0;}
+		    #fund-service .modal-dialog{width:55%;min-width:600px;}
+            #fund-service .fund-service-head{background:#FDFDFD;font-weight:bold;border:1px solid #DDDDDD;border-radius: 5px 5px 0 0;}
+            #fund-service .fund-service-head div{border:none}
+            #fund-service .fund-service-wrap{border:1px solid #DDDDDD;border-radius: 0 0 5px 5px;border-top: none;}
+            #fund-service .fund-service-wrap input{width:13px;height:13px;margin-left:8px;}
+            #fund-service .fund-service-wrap button{font-size:13px;color:#FFFFFF}
+            #fund-service .fund-service-wrap span{color:#FFFFFF}
+            #fund-service .fund-service-wrap div,#fund-service .fund-service-head div{display:inline-block;height:30px; line-height: 30px;}
+            #fund-service .fund-service-outer{width:100%;border-bottom:1px solid #DDDDDD;}
+            #fund-service .modal-body div{text-align:left;}
+            #fund-service .div1{width:130px;padding-left:15px;border-right:1px solid #DDDDDD;}
+            #fund-service .div2{width:65%;}
+            #fund-service .div3{width:62px;float:right;border-left:1px solid #DDDDDD;padding-left:4px;}
+            #fund-service .fund-service-outer:nth-child(odd){background:#F5F5F5}
+            #fund-service .fund-service-outer:nth-child(even){background:#D5ECBF}
+           
+            #channel-service .header{min-width:260px}
+            #channel-service .row>div{padding-left:0}
+            
+            
+            
+           /* #cd-data  .header .input-group .form-control{margin:0;height:34px}*/
+          
+           /* #cd-data  .header .file-input .input-group,#cd-data  .header .file-input .input-group-btn{display:inline-block;}*/
+            
+       /*产品品种模态框*/
+           #product-type .modal .modal-dialog{width:60%}
+           #product-type .modal input[type="radio"]{height:12px;width:12px;display:inline-block;margin-left:3px;vertical-align:top;}
+           #product-type .modal-body{font-size:13px;padding:8px 10px 15px 10px;}
+           #product-type .modal-body td{padding:1px 4px;position:relative;line-height:30px;}
+           #product-type .modal-body td div{position:absolute;top:6px;line-height:18px;}
+           #product-type .modal-body .rows2{padding-top:20px}
+           #product-type .modal-body button span{color:#FFFFFF;margin-right:3px;}
+           #product-type .modal-body tr td:last-of-type{width:68px;}
+           #product-type .modal .add-text{width:140px;margin-bottom: 0;padding-right:0;}
+           #transfer-para .modal-body .form-group{padding-right:60px;margin-bottom: ;}
+           #product-type>ul li{display: none;}
+           #product-type>ul .li-block{display:block;}
+           #deal-time-list table td span{margin-right:15px}
+           /*产品品种-交易时间段模态框*/
+           #time-show .modal-content{width:400px;margin:0 auto}
+           #time-show .modal-dialog .form-group{padding-right:20px;margin-bottom:0;text-align: center;}
+           #time-show .modal-dialog .add-text{width:80px} 
+           /*产品品种-大额存单产品品种机构额度控制列表*/
+           #limit-control-list  .table-responsive .table{width:110%;max-width:130%;}
+           /*产品品种-工作日控制*/
+           #work-control .work-control-left{width:75%}
+           #work-control th{text-align:center;height:20px;padding:2px 8px;font-weight:600;}
+           #work-control td{padding:0}
+           #work-control .calendar-head{width:100%}
+           #work-control .calendar-head>div{display:inline-block;color:#31A6D8;vertical-align:middle;}
+           #work-control .calendar-head .header1{width:32%;text-align:left;font-weight:700;}
+           #work-control .calendar-head .header2{width:35%;text-align:center;font-size:32px;}
+           #work-control .calendar-head .header3{width:32%;text-align:right;}
+           #work-control .calendar-head .btn-group{margin-bottom:0;}
+           #work-control td p{margin-bottom:2px;text-align:right;padding-right:2px;}
+           #work-control td div{border-radius:3px;height:25px;font-size:12px;color:#FFFFFF;line-height:25px;padding-left:4px;margin:0 1px 1px 1px}
+           #work-control .tag0{background:#58A2C9}
+           #work-control .tag1{background:#ADDE9B}
+           #work-control .tag2{background:#E56F89}
+           #work-control .tag3{background:#2183B4}
+           #work-control .tag4{background:#BF3667}
+           #work-control .tag5{background:#95BFD6}
+           /*产品品种-交易模式模态框*/
+           #trade-mode-modal input{height:13px;width:13px;position:relative;top:2px}
+           #trade-mode-modal .modal-content{width:520px;margin:0 auto;}
+           #trade-mode-modal .modal-body span{color:#000000;margin-right: 5px;}
+           /*产品品种-价格偏离模态框*/
+           #price-deviate-modal .modal-content{width:550px;margin:0 auto;overflow:auto;max-height:520px;}
+           #price-deviate-modal .modal-content .form-control{width:130px}
+           #price-deviate-modal .modal-content table,#property-out .modal-content table{margin-bottom:0;}
+           /*产品品种-品种限额模态框*/
+           #property-out .modal-content{width:700px;margin:0 auto;overflow:auto;max-height:520px;}
+           #property-out input{position:relative;top:5px}
+           #property-out td{position:relative;color:#317EAC}
+           #property-out .rows2 span{position:absolute;top:50%;margin-top:-15px;color:#317EAC}
+           #property-out td button{position:absolute;top:50%;margin-top:-15px}
+           #property-out .rows2{width:120px}
+           
+           #product-divide .container{padding:80px 0 0 120px;position:relative;}
+           #product-divide .row div{border-radius:4px;min-height:100px;margin: 10px 0 0 10px;padding:0;position:relative;text-align:center;background:#F9F9F9;box-shadow:2px 4px 4px #C0C0C0;}
+           #product-divide .row p{color:#2FA4E7;font-size:20px;text-align:center;padding-top:20px;height:63px;}
+           #product-divide .row div div{margin:0;height:100%;width:100%;background:rgba(175,175,175,0.5);position:absolute;top:0;left:0;display:none;}
+           #product-divide .row span{font-size:28px;color:rgba(129,126,126,0.5);margin-bottom:5px;}
+           #product-divide .row .glyphicon-list-alt{padding-right:30px}
+           
+          
+
+       
+       
+
+           
+                

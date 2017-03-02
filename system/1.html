@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#save{position:absolute;top:50%;left:50%;background:#1683C0;color:#FFFFFF;height:40px;border-radius:5px;padding-right:10px;
+			      margin-left:-120px;display:none;line-height:40px;-webkit-transition:all 1s ease-in 1s;-moz-transition:all 1s ease-in 1s;transition:all 1s ease-in 1s;} 
+			#save .img{display:inline-block;height:32px;width:36px;background:url(../images/jbox-icons.png) -70px 0px no-repeat;margin:4px 5px 0 4px}
+			#save span{vertical-align:top;font-size:16px;}
+		</style>
+	</head>
+	<body>
+		<button type="submit" class="btn btn-info" id="save-btn">保&nbsp;存</button> 
+		<div id="save">
+			  <div class="img"></div><span>保存版本信息成功</span>
+		</div>
+					 	        
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script>
+		window.onload=function(){
+			$("#save-btn").click(function(){ 
+				$("#save").css({"display":"block"}) 
+				setTimeout(function(){$("#save").css({"top":0,"opacity":0})},100)
+				setTimeout(function(){$("#save").css({"top":"50%" ,"display":"none","opacity":1})},2100)
+			})
+			 
+		}
+	</script>
+</html>

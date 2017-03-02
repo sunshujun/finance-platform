@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/system.css" />
+		<link href="../css/common.css" rel="stylesheet">
+		<link rel="stylesheet" href="../css/jquery.treeview.css" />
+		<title></title>
+		<style>
+		    ul,li{margin:0;padding:0}
+		    #device-role-modal{opacity:0;}
+			#device-role-modal .modal-header{padding:10px 20px 5px 18px;line-height:24px;color:#333}
+			#device-role-modal .dismiss{float:right;font-size:25px;color:#ccc;cursor: pointer;}
+			#device-role-modal .modal-body{color:#333;font-size:68.75%;height:400px;overflow:auto;}
+			#device-role-modal .modal-body .file{cursor:pointer;}
+			#device-role-modal .modal-footer{padding:0;}
+			#device-role-modal .modal-footer span{text-indent:10px;color:#444;line-height:35px;float:left;}
+			#device-role-modal .modal-footer button{float:right;margin:2px}
+			#device-role-modal .one,#device-role-modal .two{border-right:1px solid #ccc;}
+		</style>
+	</head>
+	<body>
+		<div class="tab-content  " id="right-MyTabContent" >
+			<!--页面首页右侧切换角色管理-->
+			<div class="tab-pane fade active in row" id="role-manage">
+				
+						<ul class="nav nav-tabs">
+							<li class="active in"><a href="#role-list" data-toggle="tab">角色列表</a></li>
+							<li ><a href="#role-add" data-toggle="tab">角色添加</a></li>
+							<li ><a href="#role-devide" data-toggle="tab">角色分配</a></li>
+						</ul>
+						
+						<div class="tab-content row">
+							<!--角色管理列表tab页-->
+							
+							<div class="tab-pane fade active in" id="role-list">
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th>角色标识</th>
+												<th>角色名称</th>
+												<th>角色类型</th>
+												<th>操作</th>
+											</tr>
+											
+										</thead>
+										<tbody>
+											<tr>
+												<td><a href="#role-add" data-toggle="tab">admin</a></td>
+												<td><a href="#role-add" data-toggle="tab">系统管理</a></td>
+												<td>默认类型</td>
+												<td><a href="#role-devide" data-toggle="tab">分配</a><a href="#role-add" data-toggle="tab">修改</a>
+													<a href="#delete" onclick="abc();">删除</a></td>
+											</tr>
+											<tr><td>角色abc</td><td>角色abc</td><td>角色abc</td><td>角色abc</td></tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<script>
+							    function abc(){
+					bootbox.alert({
+					title : "系统提示！",className:"abc",
+					message :"是否删除"})
+							    }
+
+							</script>
+							<!--角色管理添加tab页-->
+							
+							<div class="tab-pane fade " id="role-add">
+								
+								<form class="form-horizontal form-padding form-font">
+									<div class="form-group">
+										<label class="col-sm-2 control-label">角色ID:</label>
+										<div class="col-sm-2 ">
+											<input type="text" class="form-control">
+										</div>
+										<span class="point-color">*</span>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2  control-label">角色名称:</label>
+										<div class="col-sm-2 ">
+											<input type="text" class="form-control">
+										</div>
+										<span class="point-color">*jinotng 交易平台兴业银行</span>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 col-md-2 control-label">角色类型</label>
+										<div class="col-sm-5 col-md-2">
+											<select class="form-control">
+												<option>角色一</option>
+												<option>角色二</option>
+												<option>角色三</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 col-md-2 control-label">简单描述:</label>
+										<div class="col-md-5">
+											<textarea class="form-control"></textarea>
+										</div>
+									</div>
+									<div class="add-footer row">
+										 	<div class="col-sm-5 col-sm-offset-2">
+											 	<button type="submit" class="btn btn-info">保&nbsp;存</button> 
+											 	<button type="button" class="btn btn-default">返&nbsp;回</button>
+											</div>
+									</div>
+								</form>
+							</div>
+							
+						    
+						    <!--角色管理分配 tab页-->
+							<div class="tab-pane fade " id="role-devide">
+								<div class="header">
+									<p><span>角色名称：2</span>
+									<span>角色类型：无</span></p>
+									<span>角色描述：sdfdhfjsdhfkksdjkfdshk</span>
+								</div>
+								<div class="header">
+									<button class="btn btn-info" type="button" data-toggle="modal" data-target="#device-role-modal">分配角色</button>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-bordered table-striped">
+										<thead>
+											<tr>
+												<th>归属机构</th>
+												<th>登录名</th>
+												<th>姓名</th>
+												<th>联系电话</th>
+												<th>邮箱</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>admin</td>
+												<td>系统管理</td>
+												<td>默认类型</td>
+												<td>系统管理</td>
+												<td>默认类型</td>
+												<td><a href="#delete" data-toggle="modal">移除</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						
+						</div>
+					</div> 
+		</div>
+		
+		<div class="modal fade in" id="device-role-modal" data-backdrop="false">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<span>分配角色</span>
+						<span data-dismiss="modal" class="dismiss"> &times;</span>
+					</div>
+					<div class="modal-body clearfix">
+						<div class="one col-sm-4">
+							<p>所在机构：</p>
+							<ul id="device-tree" class="filetree">
+								<li><span class="folder">顶级机构</span>
+									<ul>
+										<li><span class="folder">总行</span>
+											<ul>
+												<li>
+													<li><span class="folder">江苏分行</span>
+													<ul>
+														<li><span class="file">南京分行</span>
+														</li>
+														<li><span class="file">无锡分行</span>
+														</li> 
+													</ul> 
+												</li>
+												<li><span class="file">浙江分行1</span>
+												</li> 
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="two col-sm-4">
+							<p>待选人员：</p>
+							<ul class="filetree">
+								<li><span class="file">text1</span></li>
+								<li><span class="file">text2</span></li>
+								<li><span class="file">text3</span></li>
+							</ul>
+						</div>
+						<div class="three col-sm-4">
+							<p>已选人员：</p>
+							<ul class="filetree">
+								<li><span class="file">text1</span></li>
+								<li><span class="file">text2</span></li>
+								<li><span class="file">text3</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="modal-footer clearfix">
+						<span>通过选择机构，然后为列出的人员分配角色。</span>
+						<button class="btn btn-default btn-sm">确定分配</button> 
+						<button class="btn btn-default btn-sm" data-toggle="modal" data-target="#delete">删除已选</button>
+						<button class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+        
+        <!--列表删除弹出框-->
+				   <div class="modal fade" id="delete" data-backdrop="false">
+									<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											 系统提示 
+										</div>
+										<div class="modal-body"> 
+											确认要删除？ 
+										</div>
+									    <div class="modal-footer">
+									    	<button class="btn btn-default" data-dismiss="modal">取消</button>
+									    	<button class="btn btn-default" data-dismiss="modal">确认</button>
+									    </div>
+									</div>
+								    </div>
+					</div>		
+	
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/system.js" ></script>
+	<script src="../js/bootbox.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+	<script type="text/javascript" src="../js/jquery.treeview.js" ></script> 
+	<script>
+		window.onload=function(){ 
+			$("#device-role-modal").modal("show")	
+			$(".filetree").treeview();
+			$("#device-role-modal").modal("hide") 
+			$("#device-role-modal").on("hidden.bs.modal",function(){ 
+				$("#device-role-modal").css("opacity",1)
+			})
+			
+			$(".one .file").each(function(i,elem){
+				$(elem).click(function(){
+					alert($(this).text())
+				})
+			})
+		}
+	</script>
+</html>

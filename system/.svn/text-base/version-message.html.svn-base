@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/system.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<title>系统设置-版本信息</title>
+	</head>
+	<body>
+		 <div class="tab-content  " id="right-MyTabContent" >
+		 	       
+		 	       <!--页面首页右侧切换版本信息-->
+					<div class="tab-pane fade active in " id="version-message">
+						<ul class="nav nav-tabs">
+							<li class="active in"><a href="#version-list" data-toggle="tab">版本信息列表</a></li>
+							<li ><a href="#version-add" data-toggle="tab">版本信息添加</a></li>
+						</ul>
+						<div class="tab-content">
+							<!--版本信息列表tab页-->
+							<div class="tab-pane fade active in" id="version-list">
+								<div id="save">
+					 	       	   <div class="img"></div><span>保存版本信息成功</span>
+					 	        </div>
+								<div class="header">
+									<form class="form-inline">
+										<div class="form-group">
+											<label>版本编号:</label>
+											<input type="text" class="form-control">
+										</div>
+										<div class="form-group">
+											<button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span>查询</button>
+											<button class="btn btn-success"><span class="glyphicon glyphicon-refresh"></span>重置</button>
+											<button class="btn btn-warning"><span class="glyphicon glyphicon-trash"></span>删除</button>
+										</div>
+									</form>
+									
+								</div>
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th><input type="checkbox"/>全选</th>
+												<th>版本编号</th>
+												<th>版本名称</th>
+												<th>创建日期</th>
+												<th>创建人员</th>
+												<th>更新日期</th>
+												<th>更新人员</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input  type="checkbox" /></td>
+												<td>1</td>
+												<td>定长报文</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td><a href="#version-add" data-toggle="tab">修改</a><a href="#delete" data-toggle="modal">删除</a><a href="#version-add" data-toggle="tab">添加</a></td>
+											</tr>
+											<tr>
+												<td><input  type="checkbox" /></td>
+												<td>1</td>
+												<td>定长报文</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td><a href="#version-add" data-toggle="tab">修改</a><a href="#delete" data-toggle="modal">删除</a><a href="#version-add" data-toggle="tab">添加</a></td>
+											</tr>
+											<tr>
+												<td><input  type="checkbox" /></td>
+												<td>1</td>
+												<td>定长报文</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td><a href="#version-add" data-toggle="tab">修改</a><a href="#delete" data-toggle="modal">删除</a><a href="#version-add" data-toggle="tab">添加</a></td>
+											</tr>
+										</tbody>
+									</table>
+									
+								</div>
+								<ul class="pagination">
+									<li class="disabled"><a href="#">&laquo;上一页</a></li>
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">&raquo;下一页</a></li>
+									<li>
+										<div class="page-num">
+									       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+								        </div>
+									</li>
+								</ul>
+							</div>
+							<!--版本信息添加tab页-->
+							<div class="tab-pane fade " id="version-add">
+								<form class="form-horizontal form-padding form-font">
+									<div class="form-group">
+										<label class="control-label col-sm-2 col-md-2">版本编号:</label>
+										<div class="col-sm-3 col-md-3" >
+											<input type="text" class="form-control"  />										
+										</div>
+										<span class="point-color">*</span>
+										
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-2 col-md-2">版本姓名:</label>
+										<div class="col-sm-3 col-md-3">
+											<input type="text" class="form-control" />
+										</div>
+										<span class="point-color">*</span>
+									</div>
+									<div class="add-footer row">
+											<div class="col-sm-5 col-sm-offset-2">
+												<button type="submit" class="btn btn-info">保&nbsp;存</button> 
+												<button type="button" class="btn btn-default">返&nbsp;回</button>
+											</div>
+									</div>
+								</form>
+								
+							</div>
+						</div>
+					</div>
+                   <!--列表删除弹出框-->
+				   <div class="modal fade" id="delete" data-backdrop="false">
+									<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h4>系统提示</h4>
+										</div>
+										<div class="modal-body">
+											确认要删除？
+										</div>
+									    <div class="modal-footer">
+									    	<button class="btn btn-default" data-dismiss="modal">取消</button>
+									    	<button class="btn btn-default" data-dismiss="modal">确认</button>
+									    </div>
+									</div>
+								    </div>
+					</div>					
+ 	 </div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/system.js" ></script>
+</html>

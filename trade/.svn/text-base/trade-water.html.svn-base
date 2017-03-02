@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link href="../css/common.css" rel="stylesheet">
+		<title></title>
+	</head>
+	<body>
+		<div class="tab-content " id="right-MyTabContent" >
+			<!--页面首页右侧切换交易流水-->
+					<div class="tab-pane fade active in " id="trade-water">
+					     <ul class="nav nav-tabs">
+							<li class="active in"><a href="#trade-water-list" data-toggle="tab">交易流水列表</a></li>
+							<li ><a href="#trade-water-add" data-toggle="tab">交易流水详情</a></li>
+						</ul>
+						<div class="tab-content">
+							<!--交易流水列表-->
+						     <div class="tab-pane fade active in" id="trade-water-list">
+								<div class="header">
+									<form class="form-inline">
+										<div class="form-group">
+											<label>交易代码：</label><select class="form-control">
+									       	       <option>———请选择———</option>
+									       	       <option>7001-参数同步</option>
+									       	       <option>7002-客户资产查询</option>
+									       	       <option>7003-报价查询</option>
+									       	       <option>7004-交易状态查询</option>
+									       	       <option>7005-委托查询</option>
+									       	       <option>7101-卖单委托</option>
+									       	       <option>7102-买单委托</option>
+									       	       <option>7103-委托撤销</option>
+									       	       <option>7104-卖单成交</option>
+									       	       <option>7105-买单成交</option>
+									        </select>
+										</div> 
+										<div class="form-group">
+											<label>客户编号：</label><input type="text" class="form-control" />
+										</div>
+										<div class="form-group">
+											<label>销售渠道：</label><select class="form-control">
+									       	       <option>———请选择———</option>
+									       	       <option>柜面</option>
+									       	       <option>网上银行</option>
+									       	       <option>手机银行</option>
+									        </select>
+										</div> 
+										<div class="form-group">
+											<label>交易状态：</label><select class="form-control">
+									       	       <option>———请选择———</option>
+									       	       <option>交易成功</option>
+									       	       <option>交易失败</option>
+									       	       <option>未知状态</option>
+									       	       <option>系统错误</option>
+									        </select>
+										</div> 
+										<div class="form-group">
+											<label>受理日期区间：</label>
+											<a>当天</a><a>最近一个月</a><a>最近半年</a>
+											<input type="text" class="form-control input-data" />&nbsp;--&nbsp;<input type="text" class="form-control input-data" />
+										</div> 
+										<div class="form-group">
+											<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+											<button class="btn btn-info "><span class="glyphicon glyphicon-refresh"></span>&nbsp;重置</button>
+											<button class="btn btn-warning "><span class="glyphicon glyphicon-open-file"></span>&nbsp;导出</button>
+									    </div>
+									</form>
+								</div>
+								<div class="table-responsive">
+										<table class="table table-striped table-bordered">
+											<thead>
+												<tr>
+													<th>交易序号</th>
+													<th>交易日期</th>
+													<th>交易时间</th>
+													<th>交易代码</th>
+													<th>客户编号</th>
+													<th>交易状态</th>
+													<th>资产状态</th>
+													<th>资金状态</th>
+													<th>操作</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>12342343241243124</td>
+													<td>13423432</td>
+													<td>234324</td>
+													<td>7014</td>
+													<td>45</td>
+													<td>未知状态</td>
+													<td>未知状态</td>
+													<td>扣除买方资金成功</td>
+													<td><a href="#trade-water-add" data-toggle="tab" >查看</a><a href="#trade-process" data-toggle="modal" >查看交易过程</a></td>
+											    </tr>
+											</tbody>
+										</table>
+										<ul class="pagination">
+											<li><a href="#">&laquo;上一页</a></li>
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li class="disabled"><a href="#">&raquo;下一页</a></li>
+											<li>
+												<div class="page-num">
+											       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+										        </div>
+											</li>
+										</ul>
+									
+								</div>
+							</div>
+							<!--交易流水添加-->
+							 <div class="tab-pane fade " id="trade-water-add">
+								<form role="form" class="form-horizontal add-list">
+									<div class="form-group">
+										<label class="control-label col-sm-2">交易流水号：</label>
+										<div class="col-sm-2 padding-div">
+											<input type="text" class="form-control"/>
+										</div>
+										<label class="control-label col-sm-2">交易日期：</label>
+										<div class="col-sm-2 padding-div">
+											<input type="text" class="form-control"/>
+										</div>
+										<label class="control-label col-sm-2">交易时间：</label>
+										<div class="col-sm-2 padding-div">
+											<input type="text" class="form-control"/>
+										</div> 
+									</div> 
+									<div class="form-group">
+										<label class="control-label col-sm-2">客户编号：</label>
+										<div class="col-sm-2 padding-div">
+											<input type="text" class="form-control"/>
+										</div>
+										<label class="control-label col-sm-2">客户名称：</label>
+										<div class="col-sm-2 padding-div">
+											<input type="text" class="form-control"/>
+										</div>
+										<label class="control-label col-sm-2">产品代码：</label>
+										<div class="col-sm-2 padding-div">
+											<input type="text" class="form-control"/>
+										</div> 
+									</div>  
+									 <ul class="nav nav-tabs" style="margin-top:10px;">
+									 	<li class="active in"><a href="#water-channel-message" data-toggle="tab">渠道信息</a></li>
+									 	<li><a href="#water-client-message" data-toggle="tab">客户信息</a></li>
+									 	<li><a href="#water-property-message" data-toggle="tab">资产信息</a></li>
+									 	<li><a href="#water-trade-message" data-toggle="tab">交易信息</a></li>
+									 	<li><a href="#water-opponent-message" data-toggle="tab">对手信息</a></li>
+									 </ul>
+									 <div class="tab-content">
+									 	<div class="tab-pane fade active in" id="water-channel-message">
+									 		<div class="form-group">
+									 			<label class="control-label col-sm-2">渠道流水号：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">接入渠道标识：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">发行机构：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>  
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">代销机构代码：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">代销渠道代码：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">管理机构：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div> 
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">渠道日期：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div> 
+											</div>
+									    </div>
+									 	<div class="tab-pane fade" id="water-client-message">
+									 		<div class="form-group">
+									 			<label class="control-label col-sm-2">客户层级：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">客户资金账号：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">银行账号：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>  
+											</div>
+											<div class="form-group"> 
+												<label class="control-label col-sm-2">客户类型：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">证件类型：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">证件号码：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>   
+											</div>
+									 	</div>
+									    <div class="tab-pane fade" id="water-property-message"> 
+											<div class="form-group">
+												<label class="control-label col-sm-2">资产冻结编号：</label>
+												<div class="col-sm-3 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">资产冻结日期：</label>
+												<div class="col-sm-3 padding-div">
+													<input type="text" class="form-control"/>
+												</div> 
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">资产状态：</label>
+												<div class="col-sm-3 padding-div">
+													<select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>交易成功</option>
+										       	       <option>交易失败</option>
+										       	       <option>未知状态</option>
+										       	       <option>系统错误</option>
+										       	    </select>
+												</div>
+												<label class="control-label col-sm-2">资金状态：</label>
+												<div class="col-sm-3 padding-div">
+													<select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>卖方资金转入成功</option>
+										       	       <option>失败</option>
+										       	       <option>扣除买方资金成功</option>
+										       	       <option>扣除买方资金未知</option>
+										       	       <option>转入买方资金成功</option>
+										       	       <option>转入买方资金未知</option>
+										       	       <option>系统错误</option>
+										       	    </select>
+												</div> 
+											</div>
+									 	</div>
+									    <div class="tab-pane fade" id="water-trade-message"> 
+											<div class="form-group">
+												<label class="control-label col-sm-2">交易代码：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">交易网点：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">交易状态：</label>
+												<div class="col-sm-2 padding-div">
+													<select class="form-control">
+												 	   <option>———请选择———</option>
+										       	       <option>交易成功</option>
+										       	       <option>交易失败</option>
+										       	       <option>未知状态</option>
+										       	       <option>系统错误</option>
+										       	    </select>
+												</div>   
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">交易后份额：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">交易金额：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">交易份额：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>   
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">币种：</label>
+												<div class="col-sm-2 padding-div">
+													<select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>人民币</option>
+										       	       <option>英镑</option>
+										       	       <option>欧元</option>
+										       	       <option>美元</option>
+										       	       <option>港元</option>
+										       	       <option>法郎</option>
+										       	       <option>日元</option>
+										       	       <option>韩元</option>
+										       	       <option>马克</option>
+										       	    </select>
+												</div>
+												<label class="control-label col-sm-2">客户收益率：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">交易柜员：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>  
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">授权柜员：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">客户经理：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">折扣率：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div> 
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">关联流水号：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">关联日期：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">原流水交易渠道：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div> 
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">原交易流水机构：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">收费方式：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">受理方式：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div> 
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">支付方式：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">外收费账号：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">主机流水号：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>  
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">主机日期：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">系统日期：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">清算账号：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div> 
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">返回码：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div> 
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">返回信息：</label>
+												<div class="col-sm-3 padding-div">
+													<textarea class="form-control" rows="3"></textarea>
+												</div> 
+											</div>
+									 	</div>
+									    <div class="tab-pane fade" id="water-opponent-message"> 
+											<div class="form-group">
+												<label class="control-label col-sm-2">对手客户编号：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">对手客户类型：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">对手渠道类型：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>  
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2">对手理财账号：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">对手资金账号：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>
+												<label class="control-label col-sm-2">对手销售机构代码：</label>
+												<div class="col-sm-2 padding-div">
+													<input type="text" class="form-control"/>
+												</div>  
+											</div>
+									 	</div>
+									
+									 </div>
+									 <div class="add-footer row">
+									 	<div class="col-sm-4 col-sm-offset-5"> 
+										 	<button type="button" class="btn btn-default">返&nbsp;回</button>
+										</div>
+									 </div>
+								</form>
+							 </div>
+							 <div class="modal fade" id="trade-process">
+							 <!--查看交易过程信息-->
+					    	<div class="modal-dialog">
+					    		<div class="modal-content">
+					    			<div class="modal-body">
+					    				<p>交易过程信息<span class="close" data-dismiss="modal">&times;</span></p>
+					    			</div>
+					    		</div>
+					    	</div>
+					    </div>
+						</div>
+					    
+					</div>
+							
+	    </div>						
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/change.js" ></script>	
+</html>

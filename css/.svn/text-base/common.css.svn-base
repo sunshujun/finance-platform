@@ -1,0 +1,127 @@
+/*字体*/
+html,body{font-family: "Telex","Helvetica Neue",Helvetica,Arial,sans-serif;}
+
+/*保存成功提示*/
+#right-MyTabContent{position:relative}
+#save{position:absolute;top:50%;left:50%;background:#1683C0;color:#FFFFFF;width:240px;height:40px;border-radius:5px;
+      margin-left:-120px;display:none;line-height:40px;} 
+#save .img{display:inline-block;height:32px;width:36px;background:url(../images/jbox-icons.png) -70px 0px no-repeat;margin:4px 5px 0 4px}
+#save span{vertical-align:top;font-size:16px;}
+
+ a:focus{outline:none;-moz-outline:none;}
+ .tab-content .tab-pane a:hover{text-decoration:none;} 
+ #right-MyTabContent .row{margin:0 3px 0 0}
+/*分页公共*/
+.pagination{margin:0;display:inline-block}
+.page-num{display: inline-block;color:#999;height:34px;line-height: 34px;vertical-align:top;font-size:13px;}
+.page-num .form-control{display:inline-block;width:35px;height: 24px;padding:2px 2px;text-align:center;}
+
+ /*添加弹出框公共*/
+#right-MyTabContent .tab-content .table th input{vertical-align:top;margin-right:4px;}
+/*.modal select, .modal .modal-body input{width:220px;height:34px;border-radius: 5px;color:#000000}*/
+/*.modal .modal-body div{margin-bottom:10px;} */
+#right-MyTabContent .modal .modal-footer{padding:5px 15px}
+#right-MyTabContent .modal .modal-header{padding:10px 15px} 
+#right-MyTabContent .modal .bootstrap-select span{color:#000000}
+
+
+/*表格样式*/
+.tab-content .table-striped td{padding:4px 8px;font-size:13px}
+.tab-content .table-striped td span{font-size:8px;margin-right:6px;}
+.tab-content .table-striped td a{margin-right: 6px;}
+.tab-content .add-footer{height:66px;background:#F5F5F5;padding-top:20px;margin-top:30px;}
+
+/*雪花*/
+ .point-color{color:#ff0000;}
+@media (max-width: 970px){
+          	 .point-color{padding-left:5px;}
+          }
+ 
+/* 表单的label*/
+ .point-title{color:#999;font-size:13px;}
+ 
+/*select样式*/
+ .inputOption{background: -moz-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+               background:-webkit-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+  			   background:-ms-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+  			   background:linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);cursor:pointer;
+			  }
+			  
+/*表单-----*/
+.form-padding{padding-top:30px;}
+.form-font{color:#555;font-size: 14px;}
+
+/*表格*/
+
+.tab-content .table-responsive thead th{color:#555;}
+.tab-content .table-responsive thead label{color:#555; font-weight: bold;}
+
+/*输入框组*/
+ .searchAdd{cursor:pointer;width:auto;}
+ .searchAdd-p{cursor:pointer;}
+ 
+ 
+ /*删除模态框*/
+#delete .modal-dialog{width:350px}
+/*  模态框*/
+.modal .modal-header{font-size:16px;color:#317EBE;font-weight: 700;}
+.modal .form-horizontal .form-group{border:none;padding-bottom:0;}
+
+.modal-backdrop{background-color:#fff;opacity:.5;}
+
+.modal label{padding-right:0;}
+
+
+
+ /*list和add tab公共样式*/
+#right-MyTabContent  .header{background:#F5F5F5;font-size:13px;padding:5px 0 5px 10px;margin-bottom: 10px;}
+#right-MyTabContent  .header .form-group label{font-weight:normal;}
+#right-MyTabContent  .header button{margin-top:5px}
+#right-MyTabContent  .header .input-data{width:150px;margin-right:0;}
+#right-MyTabContent  .header a{margin-right: 10px;}
+#right-MyTabContent  .header .inner a{margin-right:0;}
+#right-MyTabContent  .header a:hover{cursor:pointer;}
+.form-horizontal .form-group{margin-right:-5px;border-bottom:1px dotted #DDDDDD;padding-bottom:10px;}
+.form-horizontal .padding-div{padding-right:20px;position:relative;}
+.form-horizontal .padding-div .point-color{position:absolute;top:2px;right:10px;}
+.form-horizontal .form-group label{font-weight:normal;}
+#right-MyTabContent  .add-list .form-group label{font-weight:normal;margin-right:-15px} 
+#right-MyTabContent  .tab-pane ul{margin-bottom:10px}
+
+
+/*管理机构架构*/
+.organization-left{border:1px solid #CCCCCC;border-radius:3px;padding:0}
+.organization-left p,.user-left p{height:38px;background:#F5F5F5;color:#5BB7EB;padding:0 10px;line-height:38px;border-radius:3px 3px 0 0;font-weight:700;}
+.organization-left span,.user-left span{float:right;margin-top:10px} 
+
+/*按钮 */
+.get-people{display:inline-block;width:69%}   
+
+/*页面分割条*/	   
+.shrink{display:inline-block;background:#EDEDED;width:8px;position:absolute;top:0;left:0px;opacity:0.8;cursor:pointer;height:100%;}
+.shrink span{font-size:8px;position:absolute;top:50%;left:-2px;color:#666;}
+
+/*上传文件控件*/
+.file-input .input-group .kv-fileinput-caption,.file-input .input-group .btn-file{margin-top:5px}
+
+
+.form-control::-moz-placeholder{color:#FF0000}
+.form-control::-webkit-input-placeholder{color:#000000}
+.form-control::-ms-input-placeholder{color:#F0AD4E }
+
+table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after{color:#337AB7}
+
+.error1{position:absolute;left:60%;background:#FFE7E7;border:1px solid #FF0000;color:#FF0000;max-width:400px;
+         border-radius:4px;
+         max-width: 300px;
+         padding: 3px 8px;       
+        text-align: center;
+        display: none;
+        }
+  
+.triangle{ border-left:5px solid transparent;width:0;height:0;
+    border-right:5px solid transparent;
+    border-top:5px solid #ca1919;
+    position: absolute;bottom:-5px;left: 50%;
+    margin-left:-2.5px;
+    }

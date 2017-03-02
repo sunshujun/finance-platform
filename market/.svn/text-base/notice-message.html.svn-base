@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />		
+		<link rel="stylesheet" href="../css/common.css">
+		<title>市场管理-公告信息</title>
+	</head>
+	<body>
+		<div class="tab-content " id="right-MyTabContent" >
+				  <!--页面首页右侧公告信息切换-->
+					<div class="tab-pane fade active in " id="notice-message">
+					    <ul class="nav nav-tabs">
+							<li class="active in"><a href="#notice-message-list" data-toggle="tab">公告信息列表</a></li>
+							<li ><a href="#notice-message-add" data-toggle="tab">公告信息添加</a></li>
+						</ul>
+						<div class="tab-content">
+							<!--公告信息列表tab页-->
+						 <div class="tab-pane fade active in" id="notice-message-list">
+								<div class="header">
+									<form class="form-inline">
+										<div class="form-group">
+											<label>公告日期：</label><input type="text" class="form-control" />
+										</div> 
+										<div class="form-group">
+											<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+											<button class="btn btn-info "><span class="glyphicon glyphicon-refresh"></span>&nbsp;重置</button>
+											<button class="btn btn-danger "><span class="glyphicon glyphicon-trash"></span>&nbsp;删除</button>
+									    </div>
+									</form>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th><label for="market-notice" class="checkbox-inline"><input type="checkbox" id="market-notice" />全选</label></th>
+												<th>公告日期</th>
+												<th>公告类别</th>
+												<th>公告序号</th>
+												<th>公告标题</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input  type="checkbox"/></td>
+												<td>20160809</td>
+												<td>公共</td>
+												<td>0</td>
+												<td>re</td>
+												<td><a href="#notice-message-add" data-toggle="tab" >修改</a><a href="#delete" data-toggle="modal" >删除</a></td>
+										    </tr>
+										</tbody>
+									</table>
+									<ul class="pagination">
+										<li><a href="#">&laquo;上一页</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li class="disabled"><a href="#">&raquo;下一页</a></li>
+										<li>
+											<div class="page-num">
+										       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+									        </div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!--公告信息添加tab页-->
+							 <div class="tab-pane fade " id="notice-message-add">
+								<form role="form" class="form-horizontal add-list">
+									<div class="form-group">
+									 	<label class="control-label col-sm-2">公告日期<span class="point-color">*</span>：</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+										<label class="control-label col-sm-2">公告序号<span class="point-color">*</span>：</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+									 </div> 
+									 <div class="form-group">
+									 	<label class="control-label col-sm-2">公告类别：</label>
+									 	<div class="col-sm-3 padding-div">
+											<select class="form-control inputOption">
+									       	       <option>————请选择————</option>
+									       	       <option>系统公告</option>
+									       	       <option>TA公告</option>
+									       	       <option>法律法规</option>
+									        </select>
+										</div>
+										<label class="control-label col-sm-2">公告标题：</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+									 </div>  
+									 <div class="form-group">
+									 	<label class="control-label col-sm-2">公告概要：</label>
+									 	<div class="col-sm-5 padding-div">
+											<textarea class="form-control" rows="3" value="该板块插件暂时还不能实现"></textarea>
+										</div> 
+									 </div>
+									<div class="add-footer row">
+									 	<div class="col-sm-4 col-sm-offset-4">
+										 	<button type="submit" class="btn btn-primary">保&nbsp;存</button>
+										 	<button type="button" class="btn btn-default">返&nbsp;回</button>
+										</div>
+									 </div>
+								</form>
+							  </div>
+						</div>
+					
+					</div>
+					
+				  <!--列表删除弹出框-->
+				   <div class="modal fade" id="delete" data-backdrop="false">
+									<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											系统提示
+										</div>
+										<div class="modal-body">
+											确认要删除？
+										</div>
+									    <div class="modal-footer">
+									    	<button class="btn btn-default" data-dismiss="modal">取消</button>
+									    	<button class="btn btn-default" data-dismiss="modal">确认</button>
+									    </div>
+									</div>
+								    </div>
+					</div>	
+		</div>						
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/change.js" ></script>
+</html>
+

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link href="../css/common.css" rel="stylesheet">
+		<title></title>
+	</head>
+	<body>
+		<div class="tab-content " id="right-MyTabContent" >
+			<!--接入节点控制右侧切换-->
+			<div class="tab-pane fade active in" id="in-node">
+					   <ul class="nav nav-tabs">
+							<li class="active in"><a href="#in-node-list" data-toggle="tab">系统接入节点控制列表</a></li>
+							<li ><a href="#in-node-add" data-toggle="tab">系统接入节点控制添加</a></li>
+						</ul>
+						<div class="tab-content">
+							<!--接入节点列表tab页-->
+						 <div class="tab-pane fade active in" id="in-node-list">
+								<div class="header">
+									<form class="form-inline">
+										<div class="form-group">
+											<label>系统标识：</label><input type="text" class="form-control" />
+										</div> 
+										<div class="form-group">
+											<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+											<button class="btn btn-info "><span class="glyphicon glyphicon-refresh"></span>&nbsp;重置</button>
+											<button class="btn btn-danger "><span class="glyphicon glyphicon-trash"></span>&nbsp;删除</button>
+											<button class="btn btn-success "><span class="glyphicon glyphicon-refresh"></span>&nbsp;刷新所有缓冲</button>
+									    </div>
+									</form>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th><label for="sys-incheck" class="checkbox-inline"><input type="checkbox" id="sys-incheck" />全选</label></th>
+												<th>系统标识</th>
+												<th>系统名称</th>
+												<th>报文格式</th>
+												<th>字符编码</th>
+												<th>校验标识</th>
+												<th>节点地址</th>
+												<th>密钥标识</th>
+												<th>操作</th>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input  type="checkbox"/></td>
+												<td>1111</td>
+												<td></td>
+												<td>xml报文</td>
+												<td>dsjdsf</td>
+												<td><a href="#node-check" data-toggle="modal">不校验</a></td>
+												<td>127.0.0.1</td>
+												<td><a href="#pass-check" data-toggle="modal">不使用</a></td>
+												<td><a href="#in-node-add" data-toggle="tab" >修改</a><a href="#delete" data-toggle="modal" >删除</a><a href="" >刷新缓冲</a></td>
+										</tbody>
+									</table>
+									<ul class="pagination">
+										<li><a href="#">&laquo;上一页</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li class="disabled"><a href="#">&raquo;下一页</a></li>
+										<li>
+											<div class="page-num">
+										       &nbsp;&nbsp;&nbsp;&nbsp;当前<input type="text" class="form-control" />/<input type="text" class="form-control"/>页，共<span>0</span>条
+									        </div>
+										</li>
+									</ul>
+								
+								</div>
+							</div>
+							<!--接入节点添加tab页-->
+							 <div class="tab-pane fade " id="in-node-add">
+								<form role="form" class="form-horizontal add-list">
+									<div class="form-group">
+									 	<label class="control-label col-sm-2">系统标识<span class="point-color">*</span>：</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+										<label class="control-label col-sm-2">系统名称<span class="point-color">*</span>：</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+									</div> 
+									<div class="form-group">
+									 	<label class="control-label col-sm-2">报文格式<span class="point-color">*</span>：</label>
+									 	<div class="col-sm-3 padding-div">
+											<select class="form-control inputOption">
+									       	       <option>————请选择————</option>
+									       	       <option>xml报文</option>
+									       	       <option>定长报文</option>
+									        </select>  
+										</div>
+										<label class="control-label col-sm-2">字符编码<span class="point-color">*</span>：</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+									</div> 
+									<div class="form-group">
+									 	<label class="control-label col-sm-2">接受报文头字节长度<span class="point-color">*</span>：</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+										<label class="control-label col-sm-2">返回报文头字节长度</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+									</div> 
+									<div class="form-group">
+									 	<label class="control-label col-sm-2">校验标志：</label>
+									 	<div class="col-sm-3 padding-div">
+											<select class="form-control inputOption">
+									       	       <option>————请选择————</option>
+									       	       <option>不校验</option>
+									       	       <option>校验</option>
+									        </select>  
+										</div>
+										<label class="control-label col-sm-2">节点地址：</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+									</div> 
+									<div class="form-group">
+									 	<label class="control-label col-sm-2">密钥标志：</label>
+									 	<div class="col-sm-3 padding-div">
+											<select class="form-control inputOption">
+									       	       <option>————请选择————</option>
+									       	       <option>不使用</option>
+									       	       <option>使用</option>
+									        </select>  
+										</div>
+										<label class="control-label col-sm-2">主密钥：</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+									</div>  
+									<div class="form-group">
+									 	<label class="control-label col-sm-2">工作密钥：</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+										<label class="control-label col-sm-2">PIN密钥：</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+									</div>
+									<div class="form-group">
+									 	<label class="control-label col-sm-2">MAC密钥：</label>
+									 	<div class="col-sm-3 padding-div">
+											<input type="text" class="form-control"> 
+										</div>
+										
+									</div> 
+									<div class="form-group">
+										<label class="control-label col-sm-2">备注：</label>
+									 	<div class="col-sm-5 padding-div">
+											<textarea class="form-control " rows="3"></textarea>
+										</div>
+									</div>	
+									 <div class="form-group span-foot ">
+											 	<div class="col-sm-2 col-sm-offset-1">维护机构：00000</div>
+											 	<div class="col-sm-2">维护柜员：00000</div>
+											 	<div class="col-sm-4">维护时间：2016-08-15 08:46:28</div>
+									 </div>
+									 <div class="add-footer row">
+									 	<div class="col-sm-4 col-sm-offset-4">
+										 	<button type="submit" class="btn btn-info">保&nbsp;存</button>
+										 	<button type="button" class="btn btn-default">返&nbsp;回</button>
+										</div>
+									 </div>
+								</form>
+							  </div>
+						</div>
+						
+						<!--节点地址验证modal-->
+						<div class="modal fade" id="node-check" data-backdrop="false">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										结点地址配置
+									</div>
+									<div class="modal-body text-center">
+										<div class="add-text">节点地址<span>*</span>:</div><input type="text" class="form-control" />
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-default" data-dismiss="modal">关闭</button>
+										<button class="btn btn-primary">保存</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!--密钥验证modal-->
+						<div class="modal fade" id="pass-check" data-backdrop="false">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										密钥配置
+									</div>
+									<div class="modal-body ">
+										<div class="add-text">主密钥:</div><input type="text" class="form-control" />
+										<div class="add-text">工作密钥:</div><input type="text" class="form-control" />
+										<div class="add-text">PIN钥:</div><input type="text" class="form-control" />
+										<div class="add-text">MAC钥:</div><input type="text" class="form-control" />
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-default" data-dismiss="modal">关闭</button>
+										<button class="btn btn-primary">保存</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+					</div>
+		    <!--列表删除弹出框-->
+			<div class="modal fade" id="delete" data-backdrop="false">
+									<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											系统提示
+										</div>
+										<div class="modal-body">
+											确认要删除？
+										</div>
+									    <div class="modal-footer">
+									    	<button class="btn btn-default" data-dismiss="modal">取消</button>
+									    	<button class="btn btn-default" data-dismiss="modal">确认</button>
+									    </div>
+									</div>
+								    </div>
+					</div>	
+		</div>						
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/change.js" ></script>	
+</html>

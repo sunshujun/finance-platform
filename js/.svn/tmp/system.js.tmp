@@ -1,0 +1,329 @@
+
+$(document).ready(function(){
+   setInterval(function(){
+			var mainheight=$("#main").contents().find(".tab-pane").outerHeight();
+			$("#main").height(mainheight);
+		},200);
+    
+	//自动添加右侧导航条
+	var aLi=$("#myTabConten a[data-toggle='tab']");
+	aLi.each(function(i,elem){
+	$(elem).on("show.bs.tab",function(e){
+			  var activeTab = $(e.target).text();
+			  var previousTab = $(e.relatedTarget).text();
+			  var  aLi1=$(".right-content ul:first li" );
+			  var flag=false;
+			  for(var i=0;i<$( aLi1).size();i++)
+			    {
+			    	if($(".right-content ul:first li a").eq(i).text()==activeTab)
+			    	 {
+			    	 	flag=false;
+			    	 	$(".right-content ul:first li a").eq(i).tab("show");
+			    	 	break;
+			    	 }else{
+			    	 	  flag=true;
+			    	     }
+			    }
+			 if($( aLi1 ).size()<9&&flag)
+			 {
+			 	 $(".right-content ul:first .active").removeClass("active");
+				 var nav=$("<li></li>").addClass("active").html(" <a href='"+$(e.target).attr("href")+"' data-toggle='tab'>"+activeTab+"<span class='glyphicon glyphicon-remove font-color'></span></a>");
+                 $(".right-content ul:first " ).append(nav);
+			 }
+			 
+			 //删除li
+			 $(nav).find("span").click(function(){
+			 	$(this).parent().parent().remove();
+    		    $(".right-content ul:first li:last-child a").tab("show");
+			 });
+			 
+			 $(nav).find("a").click(function(){
+			 	$("iframe").attr("src",jhtml[$(this).attr("href")]);
+			 })
+			 
+		})
+		
+    })  //each()
+    
+    //点击左侧导航引入iframe并为a标签添加visit样式
+   var aIframe=$(".outer a[data-toggle='tab']");
+   var old=aIframe[0];
+   var jhtml={"#index":"shouye.html",
+   	          "#menu-manage":"system/menu-manage.html",
+              "#role-manage":"system/role-manage.html",
+              "#dictionary-manage":"system/dictionary-manage.html",
+              "#organization-manage":"system/organization-manage.html",
+              "#user-manage":"system/user-manage.html",
+              "#log-search":"system/log-search.html",
+              "#version-message":"system/version-message.html",
+              "#sys-parameter":"parameter/sys-parameter.html",
+              "#sys-node":"parameter/sys-node.html",
+              "#use-dictionary":"parameter/use-dictionary.html",
+              "#in-node":"parameter/in-node.html",
+              "#error-message":"parameter/error-message.html",
+              "#serve-message":"parameter/serve-message.html",
+              "#limit-sign":"parameter/limit-sign.html",
+              "#trade-type":"parameter/trade-type.html",
+              "#trade-mode":"parameter/trade-mode.html"
+            }
+   aIframe.each(function(i,elem){
+   	  $(elem).click(function(){
+   	  	 $("iframe").attr("src",jhtml[$(this).attr("href")]);
+   	  	 $(old).removeClass("visit");
+   	  	 $(this).addClass("visit");
+   	  	 old=$(this);
+   	  })
+   })
+   
+   //左侧导航条收缩图标变换
+   var arr=new Array()
+   var arr2=new Array()
+   $("#myTabConten .panel-heading a").each(function(i,elem){
+   	 arr[i]=0;
+   	 $(elem).click(function(){
+   	 	if(arr[i]%2==0)
+   	 	 {
+   	 	 	$(this).find("span").removeClass("glyphicon-menu-down");
+   	 	 	$(this).find("span").addClass("glyphicon-menu-right");
+   	 	 }else{
+   	 	 	$(this).find("span").addClass("glyphicon-menu-down");
+   	 	 	$(this).find("span").removeClass("glyphicon-menu-right");
+   	 	 }
+   	 	 arr[i]++;
+   	 })
+   })
+   $("#system .panel-body a[data-toggle='collapse']").each(function(i,elem){
+   	 arr2[i]=0;
+   	  $(elem).click(function(){
+   	  	if(arr2[i]%2==0)
+   	 	 {
+   	 	 	$(this).find("span").removeClass(" glyphicon-circle-arrow-right");
+   	 	 	$(this).find("span").addClass(" glyphicon-circle-arrow-down");
+   	 	 }else{
+   	 	 	$(this).find("span").addClass(" glyphicon-circle-arrow-right");
+   	 	 	$(this).find("span").removeClass(" glyphicon-circle-arrow-down");
+   	 	 }
+   	 	 arr2[i]++;
+   	  })
+   })
+    //菜单管理列表收缩
+    var flag=new Array(15);
+    for(var i=0;i<15;i++)
+      {
+      	flag[i]=true;
+      }
+      
+    $(".first-level td:first a").click(function(){
+    	
+    	if(flag[0])
+    	{
+    		$(".second-level").each(function(i,elem){
+    			$(elem).show();
+    		})
+    		flag[0]=false;
+    	}else
+    	    {
+    	    	$(".second-level").each(function(i,elem){
+    			$(elem).hide();
+    		    });
+    	    	
+    	    	$(".third").each(function(i,elem){
+    			$(elem).hide();
+    		    });
+    		   flag[0]=true;
+    		   
+    		   for(var i=1;i<15;i++)
+			      {
+			      	flag[i]=true;
+			      }
+			    $("table .change  td:first-child a:first-child ").eq(0).find("span").toggleClass("glyphicon-triangle-bottom");
+			    $("table .change  td:first-child a:first-child ").eq(1).find("span").toggleClass("glyphicon-triangle-bottom");
+    		    $(".second-level a:first-child span").each(function(i,elem){
+    	    	$(this).removeClass("glyphicon-triangle-bottom");
+    	    	$(this).addClass("glyphicon-triangle-right");
+    	      })
+    		   
+    		   
+    	    }
+    	    
+    })
+    
+    function shrink(tag,a){
+    	var id="#table-"+tag+"";
+    	var className=".third-table-"+tag;
+    	$(id+" td:first a").click(function(){
+	    	if(flag[a])
+	    	{
+	    		$(className).each(function(i,elem){
+	    			$(elem).show();
+	    		})
+	    		flag[a]=false;
+	    	}else
+	    	    {
+	    	    	$(className).each(function(i,elem){
+	    			$(elem).hide();
+	    		    })
+	    		   flag[a]=true;
+	    	    }
+	    })
+    }
+    
+    shrink("panel",1);
+    shrink("system",2);
+    shrink("parameter",3);
+    shrink("channel",4);
+    shrink("market",5);
+    shrink("product",6);
+    shrink("client",7);
+    shrink("trade",8);
+    shrink("sta",9);
+    shrink("risk",10);
+    shrink("move",11);
+    
+
+    $(".third-table-system:first td:first a").click(function(){
+    	if(flag[12])
+    	{
+    		$(".forth-menu").each(function(i,elem){
+    			$(elem).show();
+    		})
+    		flag[12]=false;
+    	}else
+    	    {
+    	    	$(".forth-menu").each(function(i,elem){
+    			$(elem).hide();
+    		    })
+    		   flag[12]=true;
+    	    }
+    })
+    
+    $(".third-table-system:eq(1) td:first a").click(function(){
+    	if(flag[13])
+    	{
+    		$(".forth-user").each(function(i,elem){
+    			$(elem).show();
+    		})
+    		flag[13]=false;
+    	}else
+    	    {
+    	    	$(".forth-user ").each(function(i,elem){
+    			$(elem).hide();
+    		    })
+    		   flag[13]=true;
+    	    }
+    })
+    
+    $(".second-level:eq(1) a:first").click(function(){
+    	
+    	        $(".forth-menu").each(function(i,elem){
+    			$(elem).hide();
+    		    })
+    	    	$(".forth-user").each(function(i,elem){
+    			$(elem).hide();
+    		    })
+    	    	if(!flag[12])
+    	    	{
+    	    		$("table .change  td:first-child a:first-child ").eq(0).find("span").toggleClass("glyphicon-triangle-bottom");
+    	    	}
+    	    	if(!flag[13])
+    	    	{
+    	    		$("table .change  td:first-child a:first-child ").eq(1).find("span").toggleClass("glyphicon-triangle-bottom");
+    	    	}
+    	    	flag[12]=true;
+    	    	flag[13]=true;
+    	    	
+    })
+    
+    $("table a[href='#menu-add']").each(function(i,elem){
+    	$(elem).on("show.bs.tab",function(e){
+    		$(".tab-content .tab-pane>ul li a[href='#menu-add']").tab("show");
+    	})
+    })
+    
+    var aTab=$(".tab-content table .second-level td:first-child a:first-child ");
+    aTab.push($("table .first-level a:first "));
+    aTab.push($("table .change  td:first-child a:first-child ").eq(0),$("table .change  td:first-child a:first-child ").eq(1));
+    aTab.each(function(i,elem){
+     	$(elem).click(function(){
+     	    $(elem).find("span").toggleClass("glyphicon-triangle-bottom");
+     	})
+     	
+     })
+    
+    //菜单列表导航条变换
+    $("#menu-list a[href='#menu-add']:contains('修改')").each(function(i,elem){
+    	$(elem).on("show.bs.tab",function(){
+    		$("#menu-manage ul:first a:eq(1)").text("菜单修改");
+    	})
+    })
+    $("#menu-manage ul:first a:eq(0)").on("show.bs.tab",function(){
+    	$("#menu-manage ul:first a:eq(1)").text("菜单添加");
+    }) 
+    //菜单功能列表变换
+    $("#menu-manage ul:first a[href='#menu-function-list']").css("display","none");
+    $("#menu-list a[href='#menu-function-list']").each(function(i,elem){
+    	$(elem).on("show.bs.tab",function(){
+    		 $("#menu-manage ul a[href='#menu-function-list']").css("display","block").tab("show");
+    	})
+    })
+    //角色列表导航条变换
+    $("#role-list table a[href='#role-add']").each(function(i,elem){
+    		$(elem).on("show.bs.tab",function(){
+    			$("#role-manage ul:first a:eq(1)").tab("show").text("角色修改");
+    		})
+    })
+    $("#role-manage ul:first a:eq(0)").on("show.bs.tab",function(){
+    	$("#role-manage ul:first a:eq(1)").text("角色添加");
+    }) 
+    
+    $("#role-list table a[href='#role-devide']").each(function(i,elem){
+    		$(elem).on("show.bs.tab",function(){
+    			$("#role-manage ul:first a:eq(2)").tab("show");
+    		})
+    })
+    
+    //字典列表导航条变换
+    $("#dictionary-list table a[href='#dictionary-add']").each(function(i,elem){
+    		$(elem).on("show.bs.tab",function(){
+    			$("#dictionary-manage ul:first a:eq(1)").tab("show").text("字典修改");
+    		})
+    })
+    $("#dictionary-manage ul:first a:eq(0)").on("show.bs.tab",function(){
+    	$("#dictionary-manage ul:first a:eq(1)").text("字典添加");
+    })
+    
+    //用户列表导航条变换
+    $("#user-list table a[href='#user-add']").each(function(i,elem){
+    		$(elem).on("show.bs.tab",function(){
+    			$("#user-manage ul:first a:eq(1)").tab("show").text("用户修改");
+    		})
+    })
+    $("#user-manage ul:first a:eq(0)").on("show.bs.tab",function(){
+    	$("#user-manage ul:first a:eq(1)").text("用户添加");
+    })
+     
+    //版本列表导航条变换
+    $("#version-list table a[href='#version-add']").each(function(i,elem){
+    		$(elem).on("show.bs.tab",function(){
+    			$("#version-manage ul:first a:eq(1)").tab("show").text("版本信息修改");
+    		})
+    })
+     $("#version-manage ul:first a:eq(0)").on("show.bs.tab",function(){
+    	$("#version-manage ul:first a:eq(1)").text("版本信息添加");
+    })
+     
+    //缩放
+    $(".shrink").click(function(){
+    	$("#myTabConten").animate({width:"hide"},{duration:400,complete:function(){
+    		$(".shrink").css("left","-2px");
+    		$(".right-content").removeClass("col-md-10").addClass("col-md-12");
+    		$(".shrink").mouseover(function(){
+	    		$(".shrink").css("left","-8px");
+		  		$(".right-content").removeClass("col-md-12").addClass("col-md-10");
+		 		setTimeout(function(){$("#myTabConten").animate({width:"show"},600,"linear");},300)
+		  		$(".shrink").unbind("mouseover");
+		 	})
+    	 }}
+    	);
+    });
+})

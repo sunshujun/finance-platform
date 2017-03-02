@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/system.css" />
+		<link href="../css/common.css" rel="stylesheet">
+		<link rel="stylesheet" href="../css/bootstrap-select.min.css" />
+		<title></title>
+	</head>
+	<body>
+		 <div class="tab-content " id="right-MyTabContent" >
+		 	        <!--页面首页右侧切换机构管理-->
+					<div class="tab-pane fade active in  clearfix row" id="organization-manage">
+						<div class="organization-left hidden-xs col-sm-3 col-md-3">
+							<p>组织机构<span class="glyphicon glyphicon-refresh"></span></p>
+						</div>
+						<div class="organization-right col-sm-9 col-md-9">
+						   <div class="shrink hidden-xs"><span class="glyphicon glyphicon-triangle-left"></span></div>
+							<ul class="nav nav-tabs">
+								<li class="active in"><a href="#role-list" data-toggle="tab">机构添加</a></li>
+							</ul>
+							<form class="form-horizontal form-padding form-font">
+								<div  class="form-group">
+									<label class="control-label col-sm-2 col-md-2">上级机构:</label>
+									<div class="col-sm-3 col-md-3">
+										<input type="text" class="form-control">
+									</div>									
+								</div>
+								<div  class="form-group">
+									<label class="control-label col-sm-2 col-md-2">机构号:</label>
+									<div class="col-sm-3 col-md-3">
+										<input type="text" class="form-control">
+									</div>									
+								</div>
+								<div  class="form-group">
+									<label class="control-label col-sm-2 col-md-2">机构名称:</label>
+									<div class="col-sm-3 col-md-3">
+										<input type="text" class="form-control">
+									</div>									
+								</div>
+								<div  class="form-group">
+									<label class="control-label col-sm-2 col-md-2">机构类别:</label>
+									<div class="col-sm-3 col-md-3">
+										<select class="form-control inputOption selectpicker" data-live-search="true">
+											<option>类别一</option>
+											<option>类别二</option>
+											<option>类别三</option>
+										</select>
+									</div>									
+								</div>
+								<div  class="form-group">
+									<label class="control-label col-sm-2 col-md-2">机构电话:</label>
+									<div class="col-sm-3 col-md-3">
+										<input type="text" class="form-control">
+									</div>									
+								</div>
+								<div  class="form-group">
+									<label class="control-label col-sm-2 col-md-2">电子邮箱:</label>
+									<div class="col-sm-3 col-md-3">
+										<input type="text" class="form-control">
+									</div>									
+								</div>
+								<div  class="form-group">
+									<label class="control-label col-sm-2 col-md-2">机构地址:</label>
+									<div class="col-sm-3 col-md-3">
+										<input type="text" class="form-control">
+									</div>									
+								</div>
+								<div  class="form-group">
+									<label class="control-label col-sm-2 col-md-2">机构描述:</label>
+									<div class="col-sm-5 col-md-5">
+										<textarea class="form-control"></textarea>
+									</div>									
+								</div>
+								<div class="add-footer row">
+									<div class="col-sm-5 col-sm-offset-2">
+										<button type="submit" class="btn btn-info">保&nbsp;存</button> 
+										<button type="button" class="btn btn-default">返&nbsp;回</button>
+									</div>
+								</div>
+							</form>
+						 </div>
+					</div>
+				   <!--列表删除弹出框-->
+				   <div class="modal fade" id="delete" data-backdrop="false">
+									<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											 系统提示 
+										</div>
+										<div class="modal-body">
+											确认要删除？
+										</div>
+									    <div class="modal-footer">
+									    	<button class="btn btn-default" data-dismiss="modal">取消</button>
+									    	<button class="btn btn-default" data-dismiss="modal">确认</button>
+									    </div>
+									</div>
+								    </div>
+					</div>					
+ 	 </div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/system.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap-select.js" ></script>
+</html>

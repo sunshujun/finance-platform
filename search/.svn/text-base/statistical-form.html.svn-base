@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link href="../css/common.css" rel="stylesheet">
+		<title></title>
+	</head>
+	<body>
+		<div class="tab-content " id="right-MyTabContent" >
+			<!--查询统计报表-->
+			   <div  class="tab-pane fade active in" id="statistical-form">
+	                	<ul class="nav nav-tabs">
+							<li class="in active "><a href="#channel-form" data-toggle="tab" >渠道统计报表</a></li>
+							<li ><a href="#bank-form" data-toggle="tab" >发行银行统计报表</a></li>
+							<li ><a href="#client-form" data-toggle="tab" >客户分类统计报表</a></li>
+							<li ><a href="#product-form" data-toggle="tab" >产品期限统计报表</a></li>
+						</ul>
+						
+						<div class="tab-content">
+							   <!--渠道统计报表-->
+							<div class="tab-pane fade active in " id="channel-form">
+							    <div class="header">
+							    	<form class="form-inline">
+							    		<div class="form-group">
+							    			<label>选择市场：</label><select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>机构市场</option>
+										       	       <option>个人市场</option>
+										       	       <option>全部市场</option>
+										        </select>
+							    		</div>
+							    		<div class="form-group">
+							    			<label> 成交日期：</label> 
+							    			<input type="text" class="form-control input-data" />&nbsp;--&nbsp;<input type="text" class="form-control input-data" />
+							    		</div>
+							    		<div class="form-group">
+											<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+										</div>
+							    	</form> 
+								</div>
+							</div>
+							
+							<!--发行银行统计报表-->
+							<div class="tab-pane fade " id="bank-form">
+							    <div class="header">
+							    	<form class="form-inline">
+							    		<div class="form-group">
+							    			<label>选择市场：</label><select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>机构市场</option>
+										       	       <option>个人市场</option>
+										       	       <option>全部市场</option>
+										        </select>
+							    		</div>
+							    		<div class="form-group">
+							    			<label> 成交日期：</label> 
+							    			<input type="text" class="form-control input-data" />&nbsp;--&nbsp;<input type="text" class="form-control input-data" />
+							    		</div>
+							    		<div class="form-group">
+											<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+										</div>
+							    	</form> 
+							    </div>
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th></th>
+												<th>发行银行</th>
+												<th>成交笔数(笔)</th>
+												<th>成交金额(万元)</th>
+												<th>加权收益率</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>个人市场</td>
+												<td>合计</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td rowspan="3" style="padding-top:30px;">
+													机构市场市场
+												</td>
+												<td>合计</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>1</td>
+												<td>0.5665</td>
+												<td>056</td>
+											</tr>
+											<tr>
+												<td>合计 </td>
+												<td>1</td>
+												<td>0.5665</td>
+												<td>056</td>
+											</tr>
+											
+										</tbody>
+									</table> 
+								</div>
+							</div>
+							
+							<!--客户分类统计报表-->
+							<div class="tab-pane fade  " id="client-form">
+							    <div class="header">
+							    	<form class="form-inline"> 
+							    		<div class="form-group">
+							    			<label> 成交日期：</label> 
+							    			<input type="text" class="form-control input-data" />&nbsp;--&nbsp;<input type="text" class="form-control input-data" />
+							    		</div>
+							    		<div class="form-group">
+											<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+										</div>
+							    	</form>  
+								</div>
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th>购买者类型</th>
+												<th>成交笔数(笔)</th>
+												<th>成交金额(万元)</th>
+												<th>加权收益率</th>
+										</thead>
+										<tbody>
+											<tr>
+												<td>个人</td>
+												<td>合计</td>
+												<td>0</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>
+													机构
+												</td>
+												<td>合计</td>
+												<td>0</td>
+												<td>0</td> 
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>1</td>
+												<td>0.5665</td>
+												<td>056</td>
+											</tr>
+											<tr>
+												<td>合计 </td>
+												<td>1</td>
+												<td>0.5665</td>
+												<td>056</td>
+											</tr>
+											
+										</tbody>
+									</table>
+							
+								</div>
+							</div>
+							
+							<!--产品期限统计报表-->
+							<div class="tab-pane fade " id="product-form">
+							     <div class="header">
+									<form class="form-inline">
+							    		<div class="form-group">
+							    			<label>选择市场：</label><select class="form-control">
+										       	       <option>———请选择———</option>
+										       	       <option>机构市场</option>
+										       	       <option>个人市场</option>
+										       	       <option>全部市场</option>
+										        </select>
+							    		</div>
+							    		<div class="form-group">
+							    			<label> 成交日期：</label> 
+							    			<input type="text" class="form-control input-data" />&nbsp;--&nbsp;<input type="text" class="form-control input-data" />
+							    		</div>
+							    		<div class="form-group">
+											<button class="btn btn-primary "><span class="glyphicon glyphicon-search"></span>&nbsp;查询</button>
+										</div>
+							    	</form> 
+								</div>
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th></th>
+												<th>产品期限</th>
+												<th>成交笔数(笔)</th>
+												<th>成交金额(万元)</th>
+												<th>加权收益率</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>个人市场</td>
+												<td>合计</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td rowspan="3" style="padding-top:30px;">
+													机构市场市场
+												</td>
+												<td>合计</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>1月</td>
+												<td>1</td>
+												<td>0.5665</td>
+												<td>056</td>
+											</tr>
+											<tr>
+												<td>合计 </td>
+												<td>1</td>
+												<td>0.5665</td>
+												<td>056</td>
+											</tr> 
+										</tbody>
+									</table> 
+								</div>
+							</div>
+		                
+						</div>
+						
+		            </div>
+					
+                   <!--列表删除弹出框-->
+				   <div class="modal fade" id="delete" data-backdrop="false">
+									<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h4>系统提示</h4>
+										</div>
+										<div class="modal-body">
+											确认要删除？
+										</div>
+									    <div class="modal-footer">
+									    	<button class="btn btn-default" data-dismiss="modal">取消</button>
+									    	<button class="btn btn-default" data-dismiss="modal">确认</button>
+									    </div>
+									</div>
+								    </div>
+					</div>					
+
+						
+	    </div>						
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../js/change.js" ></script>	
+</html>

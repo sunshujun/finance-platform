@@ -1,0 +1,75 @@
+
+body{padding-bottom: 50px;}
+ /*顶部导航*/         
+.navbar{margin-bottom:10px;font-size:15px;background:#337AB7;background-image: linear-gradient(to bottom,#2fa4e7,#337AB7);}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, 
+.navbar-default .navbar-nav > .active > a:hover{background-color:#33658f;color:#fff;}
+.navbar-default .navbar-nav li a:hover{background-color:#23527C; color:#fff;}          
+.navbar-nav .quit{margin-right:5px;}
+.navbar-static-top .navbar-right{margin-right:0px;}
+.navbar .navbar-brand{font-size:24px;color:#FFFFFF}
+.navbar-default .navbar-toggle .icon-bar{background: #FFFFFF;}
+.navbar-default .navbar-nav>li>a{color:#FFFFFF}
+.navbar-default .navbar-nav>li>a:hover{color:#ddd}
+.navbar-nav li a{padding:15px 10px 15px 10px;}
+.navbar-header{position:relative}
+.navbar-header .navbar-brand:hover,.navbar-header .navbar-brand:visited{color:#FFFFFF}
+.navbar-header button{position:absolute;right:0px;top:0px}
+.navbar .dropdown-menu {width:140px}
+.navbar .dropdown-menu li{height:30px;color: #337AB7;}
+.navbar .dropdown-menu>li>a:hover{background:#337AB7;color:#FFFFFF}
+.navbar .dropdown-menu span{margin-right:5px;}
+.navbar .dropdown-menu a{padding:5px 10px;color:#337AB7}
+@media (max-width: 767px){
+						    .navbar-default .navbar-nav .open .dropdown-menu>li>a { color: #ffffff; text-align:left;padding-left:25px;}
+						    .navbar-default .navbar-nav .open .dropdown-menu>li{color: #ffffff;}
+						    .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{background:#CCCCCC;color:#FFFFFF}
+		                 }
+		                 
+
+/*公共页面内容*/
+.outer{position:relative;width:100%;margin-left:0;}
+<<<<<<< .mine
+.outer .right-content{position:relative;padding:4px 0 0 10px;transition: width 0.8s;
+=======
+.outer .right-content{position:relative;padding:4px 0 0px 10px;transition: width 0.8s;
+>>>>>>> .r145
+								-moz-transition: width 0.8s; /* Firefox 4 */
+								-webkit-transition: width 0.8s; /* Safari 和 Chrome */
+								-o-transition: width 0.8s;}
+.outer .tab-content{padding-left:0;}				   
+.tab-content .row{margin:0;padding:0 2px 0 0}	
+/*页面分割条*/	   
+.shrink{display:inline-block;background:#EDEDED;width:8px;position:absolute;top:0;left:-8px;opacity:.5;cursor:pointer;height:100%;}
+.shrink span{font-size:12px;position:absolute;top:50%;left:-2px;color:#BBBABA;}
+
+/*iframe页面上边距*/
+.iframe-padding{padding-top:10px;}
+
+ /*左侧导航条样式*/
+.panel-heading span{margin-right:4px;}
+.panel-body{padding:8px 15px }
+.panel-body li{padding:2px 0 3px 0;display:block}
+.panel-body li span{margin-right:4px;}
+.tab-content .panel-body{font-size:12px;}
+.tab-content .panel-body ul{margin-bottom:0;}
+.tab-content .panel-collapse .collapse{margin-left:10px;}
+.tab-content .panel-body a{display:block;padding:4px 2px 4px 6px;}
+.nav-left{padding:0px;}
+.nav-left a{display:block;padding:10px 15px;}
+.tab-content .panel-body a:hover{text-decoration:none;color:#FFFFFF;background:#309ADB;}
+.tab-content .panel-body .visit{color:#FFFFFF;background:#309ADB;}
+.tab-content .panel a:link{text-decoration: none}
+.menuLeft a{display:block;}
+
+/*右侧标签页标题导航*/
+.right-content .nav li{padding:0 6px;height:32px}
+.right-content .nav li a span{display:none;}
+.right-content .nav .active span{display: inline;}
+.right-content .nav a{padding:6px 10px 4px 10px;text-align:center;}
+.right-content .nav a span{margin:0px 0 0 8px;display:inline-block;color:#999999}
+.right-content .nav a span:hover{cursor:pointer;color:#CCCCCC}
+
+/*页脚*/
+.foot{background:#fff;margin-bottom: 0px;min-height: 40px;border-top-width:2px;}
+.foot p{margin: 0px 0px 0px;text-align: center;font-size:12px;}

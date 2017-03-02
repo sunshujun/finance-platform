@@ -1,0 +1,71 @@
+    /*产品品种模态框*/
+           #product-type .modal input[type="radio"]{height:12px;width:12px; }
+           #product-type .modal-body{font-size:13px;padding:8px 10px 15px 10px;}
+           #product-type .modal-body td{padding:1px 4px;position:relative;line-height:30px;}
+           #product-type .modal-body td div{line-height:18px;margin:5px 0 0 0;}
+           #product-type .modal .modal-body div 
+           #product-type .modal-body .rows2{padding-top:20px}
+           #product-type .modal-body button span{color:#FFFFFF;margin-right:3px;}
+           #product-type .modal-body tr td:last-of-type{width:68px;}
+           #product-type .modal .add-text{width:140px;margin-bottom: 0;padding-right:0;} 
+           #product-type>ul li{display: none;}
+           #product-type>ul .li-block{display:block;}
+           #deal-time-list table td span{margin-right:15px}
+           /*产品品种-交易时间段模态框*/ 
+           #time-show .modal-dialog label{margin-top:10px;} 
+           /*产品品种-大额存单产品品种机构额度控制列表*/
+           #limit-control-list  .table-responsive .table{width:1060px;}
+           /*产品品种-工作日控制*/
+           #work-control .work-control-left{width:75%}
+           #work-control th{text-align:center;height:20px;padding:2px 8px;font-weight:600;}
+           #work-control td{padding:0}
+           #work-control .calendar-head{width:100%}
+           #work-control .calendar-head>div{display:inline-block;color:#31A6D8;vertical-align:middle;}
+           #work-control .calendar-head .header1{width:32%;text-align:left;font-weight:700;}
+           #work-control .calendar-head .header2{width:35%;text-align:center;font-size:32px;}
+           #work-control .calendar-head .header3{width:32%;text-align:right;}
+           #work-control .calendar-head .btn-group{margin-bottom:0;}
+           #work-control td p{margin-bottom:2px;text-align:right;padding-right:2px;}
+           #work-control td div{border-radius:3px;height:25px;font-size:12px;color:#FFFFFF;line-height:25px;padding-left:4px;margin:0 1px 1px 1px}
+           #work-control .tag0{background:#58A2C9}
+           #work-control .tag1{background:#ADDE9B}
+           #work-control .tag2{background:#E56F89}
+           #work-control .tag3{background:#2183B4}
+           #work-control .tag4{background:#BF3667}
+           #work-control .tag5{background:#95BFD6}
+           /*产品品种-交易模式模态框*/
+           #trade-mode-modal input{height:13px;width:13px;position:relative;top:2px} 
+           #trade-mode-modal .modal-body span{color:#000000;margin-right: 5px;}
+           /*产品品种-价格偏离模态框*/ 
+           #price-deviate-modal .modal-content .form-control{width:130px}
+           #price-deviate-modal .modal-content table,#property-out .modal-content table{margin-bottom:0;}
+           /*/*产品品种-品种限额模态框*/  
+           #property-out td{position:relative;color:#317EAC}
+           #property-out .rows2 span{color:#317EAC} 
+           
+           #product-divide .container{padding-top:80px;position:relative;}
+           #product-divide .row div{border-radius:4px;min-height:100px;margin: 10px 0 0 10px;padding:0;position:relative;text-align:center;background:#F9F9F9;box-shadow:2px 4px 4px #C0C0C0;}
+           #product-divide .row p{color:#2FA4E7;font-size:20px;text-align:center;padding-top:20px;height:63px;}
+           #product-divide .row div div{margin:0;height:100%;width:100%;background:rgba(175,175,175,0.5);position:absolute;top:0;left:0;display:none;}
+           #product-divide .row span{font-size:28px;color:rgba(129,126,126,0.5);margin-bottom:5px;}
+           #product-divide .row .glyphicon-list-alt{padding-right:30px}
+           @media (max-width:767px ) {
+           	  #product-divide .row div{margin-left:auto;margin-right:auto;float:none;}
+           	  #product-divide .container{padding-top:40px;}
+           }
+           @media (max-width:400px ) {
+           	 #product-divide .container{padding-top:20px;}
+           }
+           
+           .modal-table{margin-bottom: 0px;} 
+           
+          
+           /*模态框表格头固定*/
+        #product-type .modal .modal-body{padding-bottom:0;}
+		.modal .table-responsive{position:relative;height:240px;overflow:auto;}
+		.modal .table thead th{color:#fff}
+		.table-head{position:absolute;top:0;height:37px;z-index:10;border:1px solid #CCCCCC;background:#FFFFFF;}  
+		.table-head div{display:inline-block;font-weight:700;font-size:13px;line-height:35px;float:left;border-right:1px solid #CCC;text-align:center;}    
+		.modal .table>thead>tr>th{padding-right:0} 
+ 
+        

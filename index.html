@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link href="css/index.css" rel="stylesheet">		
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/bootstrap-select.min.css" />
+		
+		<title></title>
+	</head>
+	<body> 
+		</div>
+		<!--导航条 -->
+		<nav class="navbar navbar-default navbar-static-top nav-pills">
+		   
+		   	  <div class="navbar-header ">
+				<a class="navbar-brand " href="#">金融资产交易平台</a>
+				<button type="button" class="navbar-toggle"  data-toggle="collapse" data-target="#navbar-col">
+					 <span class="sr-only">切换导航</span>
+			         <span class="icon-bar"></span>
+			         <span class="icon-bar"></span>
+			         <span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="navbar-col">
+				<ul class="nav navbar-nav " id="myTab">
+					<li class="active"><a href="#system" data-toggle="tab">系统设置</a></li>
+					<li class=""><a href="#parameter" data-toggle="tab">参数管理</a></li>
+					<li class=""><a href="#channel" data-toggle="tab">渠道管理</a></li>
+					<li class=""><a href="#market" data-toggle="tab">市场管理</a></li>
+					<li class=""><a href="#product" data-toggle="tab">产品管理</a></li>
+					<li class=""><a href="#client" data-toggle="tab">客户管理</a></li>
+					<li class=""><a href="#trade" data-toggle="tab">交易管理</a></li>
+					<li class=""><a href="#search" data-toggle="tab">查询统计管理</a></li>
+					<li class=""><a href="#risk" data-toggle="tab">风险管理</a></li>
+					<li class=""><a href="#operation" data-toggle="tab">运维管理</a></li>
+				</ul>
+				
+				<!--导航栏的下拉菜单-->
+				<ul class="nav navbar-nav navbar-right" >
+					<li class="dropdown" >
+						<a class="dropdown-toggle" data-toggle="dropdown" ><span class="glyphicon glyphicon-th-large"></span></a>
+						<ul class="dropdown-menu ">
+							<li class="text-center"><a>——请选择主题——</a></li>
+							<li class="text-center"><a>天蓝主题</a></li>
+							<li class="text-center"><a>默认主题</a></li>
+							<li class="text-center"><a>Flat主题</a></li>
+							<li class="text-center"><a>橙色主题</a></li>
+							<li class="text-center"><a>红色主题</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown">你好，123</a>
+					    <ul class="dropdown-menu">
+					    	<li><a><span class="glyphicon glyphicon-user"></span> 个人信息</a></li>
+					    	<li><a><span class="glyphicon glyphicon-lock"></span> 修改密码</a></li>
+					    </ul>
+					</li>
+					<li><a href="#" class="quit">退出</a></li>
+				</ul>
+			</div>
+				  
+		</nav>
+	
+	    <div class="outer row clearfix ">
+			<!--页面左侧导航面板--> 
+			<div class="tab-content col-sm-2 " id="myTabConten" >
+				<!--系统设置-->
+				<div class="tab-pane fade in active" id="system" >
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a data-toggle="collapse" href="#system-set"  ><span class="glyphicon  glyphicon-menu-down"></span>系统设置</a>
+						</div>
+						<div id="system-set" class="panel-collapse collapse fade in menuLeft">
+							<div class="panel-body">
+								<ul class="list-unstyled">
+									<li>
+										<a data-toggle="collapse" href="#system-manage"><span class="glyphicon glyphicon-circle-arrow-right"></span> 系统设置</a>
+										
+									</li>
+									<ul  class=" list-unstyled collapse fade " id="system-manage">
+											<li ><a href="#menu-manage" data-toggle="tab"  ><span class="glyphicon glyphicon-list-alt"></span>菜单管理</a></li>
+											<li ><a href="#role-manage" data-toggle="tab"><span class="glyphicon glyphicon-user"></span>角色管理</a></li>
+											<li ><a href="#dictionary-manage" data-toggle="tab"><span class="glyphicon glyphicon-book"></span>字典管理</a></li>
+									</ul>
+									<li>
+										<a href="#organize-user"  data-toggle="collapse"><span class="glyphicon glyphicon-circle-arrow-right"></span> 机构用户</a>
+									    
+									</li>
+									<ul class="collapse fade list-unstyled" id="organize-user">
+									    	<li><a href="#organization-manage" data-toggle="tab"><span class="glyphicon glyphicon-barcode"></span>机构管理</a></li>
+									    	<li><a href="#user-manage" data-toggle="tab"><span class="glyphicon glyphicon-briefcase"></span>用户管理</a></li>
+									</ul>
+									<li><a href="#log-search" data-toggle="tab"><span class="glyphicon glyphicon-search"></span> 日志查询</a></li>
+									<li><a href="#version-message" data-toggle="tab"><span class="glyphicon glyphicon-align-justify"></span> 版本信息</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			    <!--参数管理-->
+				<div class="tab-pane fade " id="parameter" >
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a data-toggle="collapse" href="#parameter-manage"><span class="glyphicon glyphicon-menu-down"></span> 参数管理</a>
+						</div>
+						<div id="parameter-manage" class="panel-collapse collapse fade in">
+							<div class="panel-body">
+								<ul class="list-unstyled">
+									<li><a href="#sys-parameter" data-toggle="tab"><span class="glyphicon glyphicon-asterisk"></span> 系统参数管理</a></li>
+									<li><a href="#sys-node" data-toggle="tab"><span class="glyphicon glyphicon-hand-right"></span> 系统节点注册</a></li>
+									<li><a href="#use-dictionary" data-toggle="tab"><span class="glyphicon glyphicon-book"></span> 应用字典配置</a></li>
+									<li><a href="#in-node" data-toggle="tab"><span class="glyphicon glyphicon-certificate"></span> 接入节点控制</a></li>
+									<li><a href="#error-message" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span> 错误信息登记</a></li>
+									<li><a href="#serve-message" data-toggle="tab"><span class="glyphicon glyphicon-comment "></span> 服务信息注册</a></li>
+									<li><a href="#limit-sign" data-toggle="tab"><span class="glyphicon glyphicon-bookmark"></span> 限额标识配置</a></li>
+									<li><a href="#trade-type" data-toggle="tab"><span class="glyphicon glyphicon-flash"></span> 交易类型配置</a></li>
+									<li><a href="#trade-mode" data-toggle="tab"><span class="glyphicon glyphicon-transfer"></span> 交易模式</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!--渠道管理-->
+				<div class="tab-pane fade  " id="channel" >
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a data-toggle="collapse" href="#channel-manage"><span class="glyphicon glyphicon-menu-down"></span> 渠道管理</a>
+						</div>
+						<div id="channel-manage" class="panel-collapse collapse fade in">
+							<div class="panel-body">
+								<ul class="list-unstyled">
+									<li><a href="#sale-channel" data-toggle="tab"><span class="glyphicon glyphicon-globe"></span> 销售渠道配置</a></li>
+									<li><a href="#channel-service" data-toggle="tab"><span class="glyphicon glyphicon-tasks"></span> 渠道服务配置</a></li>
+									<li><a href="#sys-out" data-toggle="tab"><span class="glyphicon glyphicon-sort"></span> 系统接出配置</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!--市场管理-->
+				<div class="tab-pane fade " id="market" >
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a data-toggle="collapse" href="#market-manage"><span class="glyphicon glyphicon-menu-down"></span> 市场管理</a>
+						</div>
+						<div id="market-manage" class="panel-collapse collapse fade in">
+							<div class="panel-body">
+								<ul class="list-unstyled">
+									<li><a href="#notice-message" data-toggle="tab"><span class="glyphicon glyphicon-volume-up"></span> 公告信息</a></li>
+									<li><a href="#sys-message" data-toggle="tab"><span class="glyphicon glyphicon-tag"></span> 系统消息事件</a></li>
+									<li><a href="#manage-message" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"></span> 管理机构信息</a></li>
+									<li><a href="#publish-message" data-toggle="tab"><span class="glyphicon glyphicon-record"></span> 发行机构信息</a></li>
+									<li><a href="#sale-message" data-toggle="tab"><span class="glyphicon glyphicon-phone-alt"></span> 销售机构信息</a></li>
+									<li><a href="#bank-message" data-toggle="tab"><span class="glyphicon glyphicon-th-large"></span> 银行信息</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!--产品管理-->
+				<div class="tab-pane fade " id="product" >
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a data-toggle="collapse" href="#product-manage"><span class="glyphicon glyphicon-menu-down"></span> 产品管理</a>
+						</div>
+						<div id="product-manage" class="panel-collapse collapse fade in">
+							<div class="panel-body">
+								<ul class="list-unstyled">
+									<li><a href="#product-type" data-toggle="tab"><span class="glyphicon glyphicon-th-list"></span> 产品品种信息</a></li>
+									<li><a href="#product-message" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"></span> 产品信息</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!--客户管理-->
+				<div class="tab-pane fade " id="client" >
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a data-toggle="collapse" href="#client-manage"><span class="glyphicon glyphicon-menu-down"></span> 客户管理</a>
+						</div>
+						<div id="client-manage" class="panel-collapse collapse fade in">
+							<div class="panel-body">
+								<ul class="list-unstyled">
+									<li><a href="#client-message" data-toggle="tab"><span class="glyphicon glyphicon-user"></span> 客户信息</a></li>
+									<li><a href="#client-agreement" data-toggle="tab"><span class="glyphicon glyphicon-pencil"></span> 客户合约登记</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!--交易管理-->
+				<div class="tab-pane fade " id="trade" >
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a data-toggle="collapse" href="#trade-manage"><span class="glyphicon glyphicon-menu-down"></span> 交易管理</a>
+						</div>
+						<div id="trade-manage" class="panel-collapse collapse fade in">
+							<div class="panel-body">
+								<ul class="list-unstyled">
+									<li><a href="#buy-entrust" data-toggle="tab"><span class="glyphicon glyphicon-star"></span> 买单委托</a></li>
+									<li><a href="#sale-entrust" data-toggle="tab"><span class="glyphicon glyphicon-star-empty"></span> 卖单委托</a></li>
+									<li><a href="#deal-message" data-toggle="tab"><span class="glyphicon glyphicon-new-window "></span> 成交信息</a></li>
+									<li><a href="#trade-water" data-toggle="tab"><span class="glyphicon glyphicon-grain"></span> 交易流水</a></li>
+									<li><a href="#property-water" data-toggle="tab"><span class="glyphicon glyphicon-leaf"></span> 资产交易流水</a></li>
+									<li><a href="#asset-water" data-toggle="tab"><span class="glyphicon glyphicon-tree-deciduous"></span> 资金交易流水</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!--查询统计管理-->
+				<div class="tab-pane fade " id="search" >
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a data-toggle="collapse" href="#search-manage"><span class="glyphicon glyphicon-menu-down"></span> 查询统计管理</a>
+						</div>
+						<div id="search-manage" class="panel-collapse collapse fade in">
+							<div class="panel-body">
+								<ul class="list-unstyled">
+									<li><a href="#statistical-form" data-toggle="tab"><span class="glyphicon glyphicon-folder-open"></span> 统计报表</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!--风险管理-->
+				<div class="tab-pane fade " id="risk" >
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a data-toggle="collapse" href="#risk-manage"><span class="glyphicon glyphicon-menu-down"></span> 风险管理</a>
+						</div>
+						<div id="risk-manage" class="panel-collapse collapse fade in">
+							<div class="panel-body">
+								<ul class="list-unstyled">
+									<li><a href="#wrong-trade" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span> 差错交易等级</a></li>
+									<li><a href="#price-deviate" data-toggle="tab"><span class="glyphicon glyphicon-exclamation-sign"></span> 价格偏离度监控</a></li>
+									<li><a href="#cd-data" data-toggle="tab"><span class="glyphicon glyphicon-stats "></span> 银行cd交易数据</a></li>
+									<li><a href="#cd-standard" data-toggle="tab"><span class="glyphicon glyphicon-cd"></span> 银行cd收益率基准</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			    <!--运维管理-->
+				<div class="tab-pane fade " id="operation" >
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a data-toggle="collapse" href="#operation-manage"><span class="glyphicon glyphicon-menu-down"></span> 运维管理</a>
+						</div>
+						<div id="operation-manage" class="panel-collapse collapse fade in">
+							<div class="panel-body">
+								<ul class="list-unstyled">
+									<li><a href="#data-clear" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span> 系统数据备份清理</a></li>
+									<li><a href="#deal-operation" data-toggle="tab"><span class="glyphicon glyphicon-exclamation-sign"></span> 系统批处理运行</a></li>
+									<li><a href="#deal-control" data-toggle="tab"><span class="glyphicon glyphicon-stats "></span> 系统批处理控制</a></li>
+									<li><a href="#list-manage" data-toggle="tab"><span class="glyphicon glyphicon-th "></span> 序列管理</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<!--页面右侧内容面板-->
+			<div class="right-content col-xs-12 col-sm-10">
+                <div class="shrink hidden-xs" id="shrink"><span class="glyphicon glyphicon-triangle-left"></span></div>
+				<!--页面右侧导航条-->
+				<ul class="nav nav-tabs">
+					<li class="in active ">
+						<a href="#index" data-toggle="tab" >首页</a>
+					</li>
+				</ul>
+
+				<iframe src="index-content.html" id="main" width="100%"  frameborder="no" scrolling="no" class="iframe-padding" ></iframe>
+
+
+			</div>
+			    
+		</div>
+		
+        
+       
+
+		<nav class="navbar navbar-default navbar-fixed-bottom foot"> 
+		
+		    <div class="navbar-inner navbar-content-center"> 
+		
+		        <p class="text-muted credit" style="padding: 10px;"> 
+		
+		          Copyright © 2016-2016 金融资产交易平台
+		
+		        </p> 
+		
+		    </div> 
+		
+		</nav> 
+
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="js/system.js" ></script> 
+	<script type="text/javascript" src="js/bootstrap-select.js" ></script>
+	<script>
+	  $("#main").load(function(){
+	  	var h=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+	var minHeight=h-$(".navbar-static-top").outerHeight()-$(".right-content ul:first").outerHeight()-$(".navbar-fixed-bottom").outerHeight()-31;
+    var mainheight=$("#main").contents().find(".tab-pane").innerHeight(); 
+            console.log(h+":"+minHeight+":"+mainheight); 
+			if(mainheight<minHeight)
+			  {
+			  	mainheight=minHeight;
+			  } 
+			$("#main").height(mainheight); 
+			$("#main").contents().find(".tab-pane .right .shrink").height(mainheight);
+	  })
+	</script>
+</html>
